@@ -1,0 +1,29 @@
+{
+  "dataset": "csi300",
+  "version": "2026-09-11",
+  "rows": 4055,
+  "start": "2010-01-04",
+  "end": "2026-09-11",
+  "columns": [
+    "index_id",
+    "date",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume_native",
+    "amount_native",
+    "available_at",
+    "availability_basis",
+    "ingested_at",
+    "source_id",
+    "data_quality"
+  ],
+  "price_basis": "price index points; excludes dividends",
+  "sha256": "d8ed6fc4ea0cabcaf8ed65528e8291f88adb2f25093fb15138fdc9cbde5635c3",
+  "source_ids": [
+    "baostock_index"
+  ],
+  "redistribution_status": "not_cleared",
+  "code_license_does_not_apply_to_data": true
+}

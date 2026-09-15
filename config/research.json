@@ -1,0 +1,20 @@
+{
+  "direction": "DEMO: explore simple price factors and long-only allocation",
+  "history_days": 120,
+  "execution": {
+    "buy_cost": 0.0005,
+    "sell_cost": 0.0015
+  },
+  "constraints": {
+    "max_drawdown": 0.3,
+    "min_days": 10
+  },
+  "target": {
+    "reward_at_least": 1.0
+  },
+  "budget": {
+    "max_experiments": 20,
+    "seconds_per_experiment": 30
+  },
+  "protocol": "config/time.json"
+}

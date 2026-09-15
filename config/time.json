@@ -1,0 +1,26 @@
+{
+  "protocol_id": "daily_time_example_v1",
+  "method": "time",
+  "history_days": 120,
+  "entry_lag_sessions": 1,
+  "holding_sessions": 1,
+  "signal_time": "after_local_session_close",
+  "boundary_rule": "Signal and label_end must both lie within the assigned fixed calendar period; earlier history is warmup only",
+  "purpose": "past-to-future research; validation drives iteration; test once after freeze",
+  "research_config": "config/research.json",
+  "policy": "config/reward.py",
+  "periods": {
+    "train": {
+      "start": "2010-01-01",
+      "end": "2019-12-31"
+    },
+    "validation": {
+      "start": "2020-01-01",
+      "end": "2022-12-31"
+    },
+    "test": {
+      "start": "2023-01-01",
+      "end": "2026-09-11"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "sp500",
+  "version": "2026-09-11",
+  "rows": 4198,
+  "start": "2010-01-04",
+  "end": "2026-09-11",
+  "columns": [
+    "index_id",
+    "date",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume_native",
+    "amount_native",
+    "available_at",
+    "availability_basis",
+    "ingested_at",
+    "source_id",
+    "data_quality"
+  ],
+  "price_basis": "price index points; excludes dividends",
+  "sha256": "2f168cef4ea2ff471a343a108a93a104c994b650ce1cd5fef0c66356dcf072b7",
+  "source_ids": [
+    "sina_sp500",
+    "sina_sp500+fred_sp500",
+    "sina_sp500+fred_sp500+statmuse",
+    "sina_sp500+statmuse"
+  ],
+  "redistribution_status": "not_cleared",
+  "code_license_does_not_apply_to_data": true
+}
