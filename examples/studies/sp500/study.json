@@ -1,0 +1,132 @@
+{
+  "market": "sp500",
+  "title": "S&P 500",
+  "attempts": 316,
+  "failed_attempts": 1,
+  "milestones": 14,
+  "frozen_champion_sha256": "6ae7aa180ed707e3a20be8862529c42895bcf62cb63cda85b349f098524e73f4",
+  "data_file": "data/sp500/prices.csv",
+  "data_sha256": "2f168cef4ea2ff471a343a108a93a104c994b650ce1cd5fef0c66356dcf072b7",
+  "history_days": 252,
+  "original_research_config": {
+    "direction": "标普500指数与现金择时：在回测最大回撤不高于50%的前提下，追求验证期净年化收益60%以上，并持续改进收益与回撤。",
+    "policy_status": "ready",
+    "history_days": 252,
+    "protocol": "config/time.json",
+    "execution": {
+      "buy_cost": 0.0005,
+      "sell_cost": 0.0005
+    },
+    "constraints": {
+      "max_drawdown_inclusive": 0.5
+    },
+    "target": {
+      "annual_return_at_least": 0.6
+    },
+    "selection": {
+      "ranking": "return_first",
+      "stop_on_target": false
+    },
+    "budget": {
+      "max_experiments": null,
+      "total_seconds": 86400,
+      "seconds_per_experiment": 120
+    }
+  },
+  "time_protocol": {
+    "protocol_id": "sp500_time_2010_20260911_h252_v1",
+    "method": "time",
+    "history_days": 252,
+    "entry_lag_sessions": 1,
+    "holding_sessions": 1,
+    "signal_time": "23:59:59 America/New_York",
+    "boundary_rule": "Signal and label_end must both lie within the assigned fixed calendar period; earlier history is warmup only",
+    "purpose": "past-to-future research; validation drives iteration; test once after freeze",
+    "research_config": "config/research.json",
+    "policy": "config/reward.py",
+    "periods": {
+      "train": {
+        "start": "2010-01-01",
+        "end": "2019-12-31"
+      },
+      "validation": {
+        "start": "2020-01-01",
+        "end": "2022-12-31"
+      },
+      "test": {
+        "start": "2023-01-01",
+        "end": "2026-09-11"
+      }
+    },
+    "calendar": "XNYS",
+    "timezone": "America/New_York"
+  },
+  "budget_note": "Original 24-hour cap; user shortened elapsed-time budget to 20 hours without modifying the frozen configuration.",
+  "effective_budget_seconds": 72000,
+  "strategies": {
+    "frozen": {
+      "attempt": "0215",
+      "file": "frozen_strategy.py",
+      "strategy_sha256": "6ae7aa180ed707e3a20be8862529c42895bcf62cb63cda85b349f098524e73f4",
+      "validation": {
+        "days": 754,
+        "total_return": 0.8097729659045891,
+        "annual_return": 0.2192772854581111,
+        "sharpe": 1.2102117319231382,
+        "max_drawdown": 0.21289549940371577,
+        "mean_turnover": 0.058355437665782495
+      },
+      "test": {
+        "days": 924,
+        "total_return": 0.8159854154904238,
+        "annual_return": 0.17670339443379546,
+        "sharpe": 1.3380989184118126,
+        "max_drawdown": 0.1615989725059065,
+        "mean_turnover": 0.021645021645021644
+      }
+    },
+    "posthoc": {
+      "attempt": "0015",
+      "file": "posthoc_strategy.py",
+      "strategy_sha256": "bc94fd398f5700ed0d42c26b576eb37026a106402b541fc53e76081de7f36fb8",
+      "validation": {
+        "days": 754,
+        "total_return": 0.1932237855919321,
+        "annual_return": 0.06082025338852248,
+        "sharpe": 0.39437713940217034,
+        "max_drawdown": 0.3223653655578401,
+        "mean_turnover": 0.01856763925729443
+      },
+      "test": {
+        "days": 924,
+        "total_return": 1.0616433911279302,
+        "annual_return": 0.2181327050246442,
+        "sharpe": 1.4555557173221545,
+        "max_drawdown": 0.19247045398972984,
+        "mean_turnover": 0.015151515151515152
+      }
+    },
+    "baseline": {
+      "attempt": "0001",
+      "file": null,
+      "strategy_sha256": "b024309ca48480e2d480d49149a606aa3343dc7986db116813a581aaffe5bf35",
+      "validation": {
+        "days": 754,
+        "total_return": 0.1856184302443582,
+        "annual_return": 0.05855564884231668,
+        "sharpe": 0.38009334882608753,
+        "max_drawdown": 0.3223653655578401,
+        "mean_turnover": 0.002652519893899204
+      },
+      "test": {
+        "days": 924,
+        "total_return": 0.9865624474089081,
+        "annual_return": 0.205870319616972,
+        "sharpe": 1.3642266327323278,
+        "max_drawdown": 0.19247045398972973,
+        "mean_turnover": 0.0021645021645021645
+      }
+    }
+  },
+  "posthoc_note": "Selected after comparing test returns across validation-champion milestones; not an independently selected winner."
+}

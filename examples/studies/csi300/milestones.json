@@ -1,0 +1,480 @@
+{
+  "results": [
+    {
+      "attempt": "0001",
+      "role": "validation_champion",
+      "strategy_sha256": "22786ea6595f6da87000c406a898250d5340a46cca4cd4bd90cc0429d6657617",
+      "description": "Baseline 1: all cash; verify feasibility and start the 24-hour session clock.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.0,
+        "annual_return": 0.0,
+        "sharpe": 0.0,
+        "max_drawdown": 0.0,
+        "mean_turnover": 0
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.0,
+          "annual_return": 0.0,
+          "sharpe": 0.0,
+          "max_drawdown": 0.0,
+          "mean_turnover": 0
+        },
+        "reward": 0.0,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0002",
+      "role": "buy_and_hold",
+      "strategy_sha256": "41cbf1d366a3ee25a496948feec1be173bf46bc23f272223874149082e4be224",
+      "description": "Reference: full index exposure throughout validation; identical next-open execution and costs.",
+      "validation": {
+        "days": 726,
+        "total_return": -0.06996873687369032,
+        "annual_return": -0.024863832738127978,
+        "sharpe": -0.008642359827688401,
+        "max_drawdown": 0.40822952590541384,
+        "mean_turnover": 0.0027548209366391185
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.1604456144086448,
+          "annual_return": 0.042836886189389745,
+          "sharpe": 0.30900885935826544,
+          "max_drawdown": 0.2598182717468507,
+          "mean_turnover": 0.0022371364653243847
+        },
+        "reward": 0.1604456144086448,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0008",
+      "role": "validation_champion",
+      "strategy_sha256": "3a5d3a0f3c91dafff3ad3526551696d14b04e6943cf91dfa9a9741199809bdf9",
+      "description": "MACD hypothesis: positive DIF and positive histogram jointly confirm trend acceleration.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.045680157778486885,
+        "annual_return": 0.015625253563462005,
+        "sharpe": 0.1929850078026776,
+        "max_drawdown": 0.21002471383265653,
+        "mean_turnover": 0.05785123966942149
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.05228450688102848,
+          "annual_return": 0.014469236898153826,
+          "sharpe": 0.17142062552477963,
+          "max_drawdown": 0.24728882159390297,
+          "mean_turnover": 0.04697986577181208
+        },
+        "reward": 0.05228450688102848,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0009",
+      "role": "validation_champion",
+      "strategy_sha256": "be26ed854db33b98cf2f853f111c7ee88399c77ae743986662f31725375e004e",
+      "description": "Reversal hypothesis: RSI14 below30 enters, above55 exits; state follows observable decisions only.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.1705991951019976,
+        "annual_return": 0.05619717703082405,
+        "sharpe": 0.56361934655659,
+        "max_drawdown": 0.1628118828210784,
+        "mean_turnover": 0.013774104683195593
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.17621893739445005,
+          "annual_return": 0.046813097611929644,
+          "sharpe": 0.7243625535388382,
+          "max_drawdown": 0.12681075524101726,
+          "mean_turnover": 0.013422818791946308
+        },
+        "reward": 0.17621893739445005,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0013",
+      "role": "validation_champion",
+      "strategy_sha256": "e9ca2f7456ec7d46c6802e8ba73384e2c1f1c2d612d3ac26c10cae078ea93950",
+      "description": "Reversal persistence: retain RSI14 entry<30 but exit only at70 to capture a larger rebound.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.22705438773915554,
+        "annual_return": 0.07360689099809892,
+        "sharpe": 0.5711625334429988,
+        "max_drawdown": 0.1480251079673376,
+        "mean_turnover": 0.011019283746556474
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.17649109727246848,
+          "annual_return": 0.04688136794562214,
+          "sharpe": 0.4690808350315086,
+          "max_drawdown": 0.21689783973563537,
+          "mean_turnover": 0.006711409395973154
+        },
+        "reward": 0.17649109727246848,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0017",
+      "role": "validation_champion",
+      "strategy_sha256": "ba5ca409d7eef74bd3b08faba8d58ffd2feeaba1fcc8578c5edec52efb65e34d",
+      "description": "Broad mean reversion: deviation below SMA20 of more than5% enters; reclaiming average exits.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.22975821466950097,
+        "annual_return": 0.07442745441993326,
+        "sharpe": 0.8125194828380803,
+        "max_drawdown": 0.09346484262172405,
+        "mean_turnover": 0.01928374655647383
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.1394136428708206,
+          "annual_return": 0.03747421487450775,
+          "sharpe": 0.7226582246304847,
+          "max_drawdown": 0.04307631619549124,
+          "mean_turnover": 0.008948545861297539
+        },
+        "reward": 0.1394136428708206,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0019",
+      "role": "validation_champion",
+      "strategy_sha256": "a0740397b038872c997761a1e40059facabdb7acd464fa4187e3dc980782b38a",
+      "description": "Reversal risk control: original RSI14 30/55 with8% signal-close drawdown stop from entry.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.23335248877394665,
+        "annual_return": 0.07551643109709882,
+        "sharpe": 0.8049366682222575,
+        "max_drawdown": 0.11363529850342391,
+        "mean_turnover": 0.01928374655647383
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.1280946217579293,
+          "annual_return": 0.0345586482288327,
+          "sharpe": 0.6161671387616067,
+          "max_drawdown": 0.12794223516383763,
+          "mean_turnover": 0.013422818791946308
+        },
+        "reward": 0.1280946217579293,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0020",
+      "role": "validation_champion",
+      "strategy_sha256": "a9f12e396908fddf744c72cdf287f1027e3be2dc62072723cccd711a9fe95d7a",
+      "description": "Reversal holding cap: original RSI14 30/55 exits after20 signal sessions if recovery stalls.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.2612046213784347,
+        "annual_return": 0.08388552201832011,
+        "sharpe": 0.8650410789434949,
+        "max_drawdown": 0.0986802709798611,
+        "mean_turnover": 0.01928374655647383
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.24389922729948244,
+          "annual_return": 0.06345220307791744,
+          "sharpe": 1.1741746291603785,
+          "max_drawdown": 0.047860778227506895,
+          "mean_turnover": 0.015659955257270694
+        },
+        "reward": 0.24389922729948244,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0070",
+      "role": "validation_champion",
+      "strategy_sha256": "3c7a011d20c64e45909bb6b9bc72b7e1382065e2cc19b98348d4ab73da20b9d9",
+      "description": "Train-only nonlinear regime model:20 bootstrap regression trees,depth3,minleaf120,5 random features per node,4 quantile splits,seed711,zero-shrunk leaf predictions. Target5-session training return; entry>25bp,exit<0;tree agreement filter=False. No date features or validation fitting.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.31109856237248135,
+        "annual_return": 0.09858104625969988,
+        "sharpe": 0.7707522852053549,
+        "max_drawdown": 0.15569185450322587,
+        "mean_turnover": 0.09917355371900827
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.3146082798117933,
+          "annual_return": 0.08015535538781982,
+          "sharpe": 0.6456606511385986,
+          "max_drawdown": 0.15056131881243517,
+          "mean_turnover": 0.06040268456375839
+        },
+        "reward": 0.3146082798117933,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0074",
+      "role": "validation_champion",
+      "strategy_sha256": "3cf0d148029295284fd0261e1e7277e7420cf026baded07b501ebb5cdb6bea85",
+      "description": "Five-day forest broader entry: lower expected-return hurdle from25bp to10bp; investigate missed low-amplitude opportunities.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.5480550957994492,
+        "annual_return": 0.16379443373695057,
+        "sharpe": 1.0013577224619412,
+        "max_drawdown": 0.16340042007577626,
+        "mean_turnover": 0.26170798898071623
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.39120020329776595,
+          "annual_return": 0.09753544347914911,
+          "sharpe": 0.6544844969516301,
+          "max_drawdown": 0.18156833006989848,
+          "mean_turnover": 0.19910514541387025
+        },
+        "reward": 0.39120020329776595,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0084",
+      "role": "validation_champion",
+      "strategy_sha256": "25bb4a7c06d294485e7eb16e5ca573f475cbda6d7256aa6f9b80a3c374a853cb",
+      "description": "Combine broader-entry forest champion with RSI reversal viaunion; both states tracked independently and maximum exposure100%. Unlike prior ensemble this uses10bp forest entry.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.5876591266133477,
+        "annual_return": 0.17404390878788423,
+        "sharpe": 1.0180235056443878,
+        "max_drawdown": 0.16772982417386717,
+        "mean_turnover": 0.21763085399449036
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.6207089788734714,
+          "annual_return": 0.14580704257909538,
+          "sharpe": 0.8926232642679334,
+          "max_drawdown": 0.16064825200214294,
+          "mean_turnover": 0.1789709172259508
+        },
+        "reward": 0.6207089788734714,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0148",
+      "role": "validation_champion",
+      "strategy_sha256": "ba3bbd1ff33e763bd93c934a787b2a709489a2c1ce56bb9da93aed48179ab144",
+      "description": "Causal feature extension trend_and_volatility: distinguish persistence, volatility shape, candle pressure, signed volume or overnight versus intraday returns within120 supplied bars. Fixed forest5day horizon/depth3/minleaf120/20trees/seed711 and RSI union; no date features or validation fitting.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.7823737667822332,
+        "annual_return": 0.22214727566656234,
+        "sharpe": 1.2958062507660895,
+        "max_drawdown": 0.14385805865041612,
+        "mean_turnover": 0.15151515151515152
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.2964052097266143,
+          "annual_return": 0.07591825641052674,
+          "sharpe": 0.5142830633006302,
+          "max_drawdown": 0.2102049927546591,
+          "mean_turnover": 0.11409395973154363
+        },
+        "reward": 0.2964052097266143,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0149",
+      "role": "validation_champion",
+      "strategy_sha256": "31af21985583243e2ddc9223337688fffaa89637f5ad47f3d56d9a122b3d8829",
+      "description": "Causal feature extension all_five_groups: distinguish persistence, volatility shape, candle pressure, signed volume or overnight versus intraday returns within120 supplied bars. Fixed forest5day horizon/depth3/minleaf120/20trees/seed711 and RSI union; no date features or validation fitting.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.8266178226190237,
+        "annual_return": 0.2325934615287173,
+        "sharpe": 1.2822191252928388,
+        "max_drawdown": 0.2122561904164223,
+        "mean_turnover": 0.14049586776859505
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.4017849171042047,
+          "annual_return": 0.09988284925784963,
+          "sharpe": 0.6359739575057345,
+          "max_drawdown": 0.1596781219697032,
+          "mean_turnover": 0.14093959731543623
+        },
+        "reward": 0.4017849171042047,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0159",
+      "role": "validation_champion",
+      "strategy_sha256": "116a81a85ecd93ed9c28cec6cafd28d27566f85ab746bdfe69c3a2b4e4602d6a",
+      "description": "Separate feature-view forests all_trend, aggregationintersection: each model20trees independently seeded711 and fit only2010-2019; combine predictions or persistent signals; common RSI reversal overlay. Hypothesis separate views complement each other without competing for individual tree split candidates.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.9442488074877566,
+        "annual_return": 0.2595862521181662,
+        "sharpe": 1.5776268865428342,
+        "max_drawdown": 0.1438580586504158,
+        "mean_turnover": 0.13774104683195593
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.25813083413618276,
+          "annual_return": 0.06686785497917436,
+          "sharpe": 0.49366689936742,
+          "max_drawdown": 0.19875774810486146,
+          "mean_turnover": 0.1319910514541387
+        },
+        "reward": 0.25813083413618276,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0162",
+      "role": "validation_champion",
+      "strategy_sha256": "69ea7213f0462f0ea5b9d9d5b4a53605455a5e37d7819b390641f05514016057",
+      "description": "Separate feature-view forests three_models, aggregationmajority: each model20trees independently seeded711 and fit only2010-2019; combine predictions or persistent signals; common RSI reversal overlay. Hypothesis separate views complement each other without competing for individual tree split candidates.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.9469393408487881,
+        "annual_return": 0.26019101104081965,
+        "sharpe": 1.4450941878516175,
+        "max_drawdown": 0.1468632879161147,
+        "mean_turnover": 0.20110192837465565
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.5671908157065415,
+          "annual_return": 0.13501290066607785,
+          "sharpe": 0.8189045087131674,
+          "max_drawdown": 0.18148943693295472,
+          "mean_turnover": 0.15883668903803133
+        },
+        "reward": 0.5671908157065415,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0176",
+      "role": "validation_champion",
+      "strategy_sha256": "484601a5655090ed08f8d4494211d98804caa63c55d3f18f80d9093834509440",
+      "description": "Interaction of reversal sleeve with fixed three-view majority forest: RSI14 entrybelow25, exitabove55, maximum20signal days. One-at-a-time changes around30/55/20 test earlier versus deeper oversold entry, rebound exit and time horizon; model features/labels/thresholds remain identical to0162.",
+      "validation": {
+        "days": 726,
+        "total_return": 0.9795494634541821,
+        "annual_return": 0.26747787990787364,
+        "sharpe": 1.5194603291164193,
+        "max_drawdown": 0.14672974373239533,
+        "mean_turnover": 0.23140495867768596
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.489630359605284,
+          "annual_return": 0.11888958779779402,
+          "sharpe": 0.7405795779127767,
+          "max_drawdown": 0.18148943693295483,
+          "mean_turnover": 0.16778523489932887
+        },
+        "reward": 0.489630359605284,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    },
+    {
+      "attempt": "0178",
+      "role": "validation_champion",
+      "strategy_sha256": "13e74a9e5a0ca4b11533d6bf03abea26123b71ec5a27ee677567d1b11dec1ab0",
+      "description": "Interaction of reversal sleeve with fixed three-view majority forest: RSI14 entrybelow30, exitabove50, maximum20signal days. One-at-a-time changes around30/55/20 test earlier versus deeper oversold entry, rebound exit and time horizon; model features/labels/thresholds remain identical to0162.",
+      "validation": {
+        "days": 726,
+        "total_return": 1.0629732521988013,
+        "annual_return": 0.2857693436837274,
+        "sharpe": 1.574946920230546,
+        "max_drawdown": 0.1448806355574902,
+        "mean_turnover": 0.21763085399449036
+      },
+      "test": {
+        "metrics": {
+          "days": 894,
+          "total_return": 0.5527489140166468,
+          "annual_return": 0.1320548299476325,
+          "sharpe": 0.8055053843989527,
+          "max_drawdown": 0.1814894369329545,
+          "mean_turnover": 0.16554809843400448
+        },
+        "reward": 0.5527489140166468,
+        "feasible": true,
+        "target_met": false,
+        "partition": "test"
+      }
+    }
+  ]
+}

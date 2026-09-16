@@ -41,5 +41,6 @@ The default protocol uses 2010–2019 for training, 2020–2022 for validation a
 2023–2026-09-11 for final testing. Change dates, history window, costs, reward, target
 and budget before preparing if they do not fit your dataset or research question.
 
-No strategy performance is published in this package. Synthetic prices remain only
-for software testing; the user-facing examples use real index histories.
+Completed CSI300 and S&P 500 studies include charts, archived strategies and a
+standalone replay command. See [results and strategy examples](studies/README.md).
+Synthetic prices remain only for software testing.

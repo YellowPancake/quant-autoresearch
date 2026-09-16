@@ -18,6 +18,23 @@ partitions. The Agent evaluates candidates through `run.py`, which records each 
 and restores the current best strategy after a discarded or failed change. Validation
 drives selection; the researcher evaluates the final test once after freezing a strategy.
 
+## Research examples
+
+Two completed studies include results, strategy source and reproducible replays.
+The table reports **frozen validation champions**, not strategies chosen after
+seeing test returns. Test period: 2023–September 11, 2026; costs: 0.05% per side.
+
+| Market | Attempts | Frozen strategy: test CAGR / drawdown | Buy-and-hold: test CAGR / drawdown |
+|---|---:|---:|---:|
+| CSI 300 | 178 | 13.21% / 18.15% | 4.28% / 25.98% |
+| S&P 500 | 316 | 17.67% / 16.16% | 20.59% / 19.25% |
+
+CSI 300 outperformed its baseline in this test. S&P 500 did not meet its
+return-first objective. Note that continued improvements on the validation set may
+not consistently translate into better test performance, so monitor for overfitting.
+
+[Charts, strategy explanations and replay commands](examples/studies/README.md)
+
 ## Quick start
 
 Requirements: Python 3.10+, macOS or Linux. The framework uses only the standard library.
@@ -64,6 +81,7 @@ strategy/               Agent edits strategy.py only
 config/                 Researcher sets the objective, budget and time protocol
 core/                   Fixed preparation, evaluation, budget and indicators
 data/                   CSI300 and S&P 500 histories with source manifests
+examples/studies/       Completed studies, charts and archived strategy replays
 docs/                   Data contract, indicator conventions and research guide
 ```
 
