@@ -141,7 +141,7 @@ Each market directory contains:
 - `milestones.json`: all evaluated historical champions and the buy-and-hold baseline.
 - `attempts.csv`: all attempt descriptions, hashes, statuses and validation metrics.
 - `daily_equity.csv`: plotted post-hoc strategy and baseline daily paths.
-- `figures/`: cumulative/annualized composites in PNG, SVG and PDF.
+- `figures/`: standalone test equity charts and cumulative/annualized composites in PNG, SVG and PDF.
 
 `plot.py` redraws the figures from these published records, without fitting or
 accessing raw price histories. Only plotting requires Matplotlib:
@@ -151,6 +151,9 @@ python3 -m pip install matplotlib
 python3 examples/studies/plot.py --market csi300 --output /tmp/csi300-figures
 python3 examples/studies/plot.py --market sp500 --output /tmp/sp500-figures
 ```
+
+Add `--equity-only` to either plotting command to regenerate the standalone chart
+used on the repository homepage.
 
 The full Agent conversation, every discarded source file and private workspaces
 are not part of this compact example release. The logs and snapshots reproduce

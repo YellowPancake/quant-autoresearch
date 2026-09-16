@@ -1,4 +1,4 @@
-"""Combine archived daily equity and milestone aggregates; never rerun strategies."""
+"""Plot archived daily equity and milestone aggregates; never rerun strategies."""
 import argparse
 import csv
 import json
@@ -16,6 +16,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--market',choices=['csi300','sp500'],required=True)
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--equity-only',action='store_true',help='Export a standalone equity chart for the README')
     args=parser.parse_args()
     folder=Path(__file__).resolve().parent/args.market
     study=json.loads((folder/'study.json').read_text())
@@ -36,6 +37,30 @@ def main():
         'xtick.direction':'in','ytick.direction':'in','svg.fonttype':'none','pdf.fonttype':42,
         'savefig.facecolor':'white','axes.unicode_minus':False})
     args.output.mkdir(parents=True,exist_ok=True)
+    if args.equity_only:
+        fig,ax=plt.subplots(figsize=(10.8,5.7))
+        fig.subplots_adjust(left=.09,right=.975,bottom=.25,top=.88)
+        fig.suptitle(f'{title}: Test-Period Equity Curves',y=.97,fontsize=15)
+        ax.grid(True,color='#DADADA',linestyle=':',linewidth=.55)
+        ax.set_axisbelow(True);ax.tick_params(top=True,right=True)
+        ax.plot(dates,[float(r['strategy_equity']) for r in daily],color='#D95F02',lw=1.6,
+                label=f"Strategy #{int(selected['attempt'])} (best test milestone; post hoc)")
+        ax.plot(dates,[float(r['buy_and_hold_equity']) for r in daily],color='#1F77B4',lw=1.45,
+                label=f'{title} buy-and-hold')
+        ax.set_xlim(dates[0],dates[-1]);ax.set_ylabel('Net asset value (initial = 1)');ax.set_xlabel('Date',labelpad=8)
+        ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=[1,7]))
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
+        handles,labels=ax.get_legend_handles_labels()
+        fig.legend(handles,labels,loc='upper center',bbox_to_anchor=(.53,.13),ncol=2,
+                   frameon=False,fontsize=9,handlelength=2.6,columnspacing=1.7)
+        fig.text(.53,.065,'Transaction costs of 0.05% per side are included.',ha='center',fontsize=9)
+        fig.text(.53,.027,f'Post-hoc comparison among {len(rows)} milestones; frozen research champion remains #{frozen}.',
+                 ha='center',fontsize=9)
+        for ext in ['png','pdf','svg']:
+            fig.savefig(args.output/f'test_equity.{ext}',dpi=240)
+        plt.close(fig)
+        print(args.output.resolve())
+        return
     for metric,label,stem,step in [
         ('total_return','Cumulative net return','combined_returns',.2),
         ('annual_return','Annualized net return','combined_annual',.05)]:

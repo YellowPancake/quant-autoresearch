@@ -124,7 +124,7 @@ python3 -B examples/studies/replay.py --market sp500 --strategy frozen
 - `milestones.json`：所有已评估的历史冠军与满仓持有基准。
 - `attempts.csv`：全部尝试的描述、哈希、状态和验证集指标。
 - `daily_equity.csv`：图中事后比较方案与基准的每日净值。
-- `figures/`：累计收益、年化收益两版合并图，包含PNG、SVG和PDF格式。
+- `figures/`：首页使用的独立测试期净值图，以及累计收益、年化收益两版合并图，均包含PNG、SVG和PDF格式。
 
 `plot.py` 根据公开记录重新绘图，不拟合策略，也不读取原始价格历史。
 仅绘图需要Matplotlib：
@@ -134,6 +134,8 @@ python3 -m pip install matplotlib
 python3 examples/studies/plot.py --market csi300 --output /tmp/csi300-figures
 python3 examples/studies/plot.py --market sp500 --output /tmp/sp500-figures
 ```
+
+在任一绘图命令后添加 `--equity-only`，即可重新生成仓库首页使用的独立净值图。
 
 本示例包未包含完整Agent对话、每份被丢弃的策略源码及私有工作区。
 日志与快照支持复现已公开的策略和图表，不保证未来Agent搜索过程完全相同。

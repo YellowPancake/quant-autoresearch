@@ -11,18 +11,32 @@ those settings while the data split and evaluator stay fixed. This project adapt
 research loop of [Karpathy's autoresearch](https://github.com/karpathy/autoresearch)
 to quantitative strategy research.
 
-## How it works
-
-`prepare.py` creates a study with fixed chronological training, validation and final-test
-partitions. The Agent evaluates candidates through `run.py`, which records each attempt
-and restores the current best strategy after a discarded or failed change. Validation
-drives selection; the researcher evaluates the final test once after freezing a strategy.
-
 ## Research examples
 
-Two completed studies include results, strategy source and reproducible replays.
-The table reports **frozen validation champions**, not strategies chosen after
-seeing test returns. Test period: 2023–September 11, 2026; costs: 0.05% per side.
+Two markets, one research workflow. Test period: 2023–September 11, 2026;
+transaction costs: 0.05% per side.
+
+The curves show the **highest test-return strategy among each study's historical
+validation champions**, selected post hoc. They illustrate the search results;
+the frozen research champions are reported separately below.
+
+### CSI 300
+
+![CSI 300 strategy versus buy-and-hold on the test set](examples/studies/csi300/figures/test_equity.png)
+
+Strategy #84: **+62.07%** cumulative return vs **+16.04%** buy-and-hold;
+maximum drawdown **16.06%** vs **25.98%**.
+
+### S&P 500
+
+![S&P 500 strategy versus buy-and-hold on the test set](examples/studies/sp500/figures/test_equity.png)
+
+Strategy #15: **+106.16%** cumulative return vs **+98.66%** buy-and-hold;
+maximum drawdown **19.25%** for both.
+
+### Frozen research champions
+
+The strategies selected on validation and frozen before final testing:
 
 | Market | Attempts | Frozen strategy: test CAGR / drawdown | Buy-and-hold: test CAGR / drawdown |
 |---|---:|---:|---:|
@@ -34,6 +48,13 @@ return-first objective. Note that continued improvements on the validation set m
 not consistently translate into better test performance, so monitor for overfitting.
 
 [Charts, strategy explanations and replay commands](examples/studies/README.md)
+
+## How it works
+
+`prepare.py` creates a study with fixed chronological training, validation and final-test
+partitions. The Agent evaluates candidates through `run.py`, which records each attempt
+and restores the current best strategy after a discarded or failed change. Validation
+drives selection; the researcher evaluates the final test once after freezing a strategy.
 
 ## Quick start
 
