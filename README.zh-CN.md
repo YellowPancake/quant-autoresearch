@@ -29,7 +29,7 @@
 基准分别采用创业板ETF后复权与沪深300全收益指数，计入0.03%买入费用，之后不调仓、不在期末卖出。
 #162为18个节点中的事后比较结果，未替换冻结策略。
 
-[宽基指数实验说明与图表数据](examples/studies/broad_market/README.zh-CN.md)
+[宽基策略源码、完整数据与复现命令](examples/studies/broad_market/README.zh-CN.md#复现策略)
 
 ### 沪深300
 

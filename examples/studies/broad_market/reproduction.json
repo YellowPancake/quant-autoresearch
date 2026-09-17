@@ -1,0 +1,116 @@
+{
+  "verified": true,
+  "tolerance": 1e-08,
+  "environment": {
+    "python": "3.12.4",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "manifest_sha256": "ac47e64ae13e8694e79a1a83a71bf6dde718d2460a88d77f6bbbb3882aa754ae",
+  "results": [
+    {
+      "role": "frozen",
+      "attempt": "0478",
+      "partition": "validation",
+      "metrics": {
+        "days": 728,
+        "start": "2020-01-02",
+        "end": "2022-12-30",
+        "total_return": 1.9624502237029522,
+        "annual_return": 0.43750493390734047,
+        "max_drawdown": 0.15081816928568992,
+        "sharpe": 1.6657817165508308,
+        "turnover": 68.93527078737748,
+        "cost_paid": 0.045531197486574325,
+        "drawdown_limit": 0.3821524669536702,
+        "feasible": true,
+        "target_met": true
+      },
+      "verification": {
+        "verified": true,
+        "daily_nav_rows": 728,
+        "orders": 43,
+        "max_nav_error": 0.0,
+        "max_weight_error": 0.0
+      }
+    },
+    {
+      "role": "frozen",
+      "attempt": "0478",
+      "partition": "test",
+      "metrics": {
+        "days": 896,
+        "start": "2023-01-03",
+        "end": "2026-09-11",
+        "total_return": 1.1669649935201258,
+        "annual_return": 0.23329537165089653,
+        "max_drawdown": 0.3099850443357193,
+        "sharpe": 1.005866847552989,
+        "turnover": 84.75879426527138,
+        "cost_paid": 0.03555758658119422,
+        "drawdown_limit": 0.28004768582544826,
+        "feasible": false,
+        "target_met": false
+      },
+      "verification": {
+        "verified": true,
+        "daily_nav_rows": 896,
+        "orders": 71,
+        "max_nav_error": 0.0,
+        "max_weight_error": 0.0
+      }
+    },
+    {
+      "role": "posthoc",
+      "attempt": "0162",
+      "partition": "validation",
+      "metrics": {
+        "days": 728,
+        "start": "2020-01-02",
+        "end": "2022-12-30",
+        "total_return": 1.5731577558750645,
+        "annual_return": 0.3713981746158268,
+        "max_drawdown": 0.13041953003959206,
+        "sharpe": 1.533190051060165,
+        "turnover": 56.98440467859642,
+        "cost_paid": 0.03176492740580553,
+        "drawdown_limit": 0.3490990873079134,
+        "feasible": true,
+        "target_met": true
+      },
+      "verification": {
+        "verified": true,
+        "daily_nav_rows": 728,
+        "orders": 34,
+        "max_nav_error": 0.0,
+        "max_weight_error": 0.0
+      }
+    },
+    {
+      "role": "posthoc",
+      "attempt": "0162",
+      "partition": "test",
+      "metrics": {
+        "days": 896,
+        "start": "2023-01-03",
+        "end": "2026-09-11",
+        "total_return": 1.7251996248160624,
+        "annual_return": 0.31237929415699717,
+        "max_drawdown": 0.30046371504105696,
+        "sharpe": 1.2246879871162888,
+        "turnover": 70.97990602819155,
+        "cost_paid": 0.029833486763358143,
+        "drawdown_limit": 0.3195896470784986,
+        "feasible": true,
+        "target_met": true
+      },
+      "verification": {
+        "verified": true,
+        "daily_nav_rows": 896,
+        "orders": 40,
+        "max_nav_error": 0.0,
+        "max_weight_error": 0.0
+      }
+    }
+  ]
+}

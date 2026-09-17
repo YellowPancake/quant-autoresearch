@@ -80,10 +80,23 @@
 年化按实际经过天数除以365.2425计算。全收益指数和含分红复权ETF行情已包含分红，不能重复添加。
 
 此次只统一收益与记账：单指数策略仍使用原价格指数训练标签拟合，从原OHLC历史生成决策；
-宽基按冻结归档订单重放。没有根据测试结果调参、用未来价格生成信号或修改冻结实验。
+公共记账审计按宽基归档订单重放；下方源码复现入口则从训练行情独立重建 #478 和 #162。
+没有根据测试结果调参、用未来价格生成信号或修改冻结实验。
 成交时点、费用、估值、年化和SPY代理均与部分旧报告不同，结果变化不能全部归因于分红。
 
 ## 策略与复现
+
+宽基已补齐完整行情及源码：[冻结冠军 #478](broad_market/frozen_strategy.py)、
+[事后比较方案 #162](broad_market/posthoc_strategy.py)。从行情重新拟合并生成两份策略的订单：
+
+```sh
+python3 -m pip install -r examples/studies/broad_market/requirements.txt
+python3 examples/studies/broad_market/replay.py
+```
+
+此入口要求Python 3.12+、NumPy和pandas，直接打印结果，并将可读摘要、每日净值与订单写入
+`results/broad-market/`。[源码复现说明](broad_market/README.zh-CN.md#复现策略)与
+[已验证结果](broad_market/reproduction.json)记录了188笔订单、3,248条日净值的核对情况。
 
 归档源码：[沪深300 #178](csi300/frozen_strategy.py)、[沪深300 #84](csi300/posthoc_strategy.py)、
 [标普500 #215](sp500/frozen_strategy.py)、[原标普事后方案 #15](sp500/posthoc_strategy.py)。

@@ -4,11 +4,53 @@
 
 20小时研究预算，共488次尝试，其中484次完成回测、4次失败，产生18个历史验证冠军节点。
 在24个指数及ETF代理构成的候选池中筛选标的、研究组合配置。
-这里只发布最新图及其数据。
+现已包含两份策略源码、完整训练与评测行情，以及从源码重新生成订单的复现入口。
 
 ![宽基策略与两种买入持有基准的净值对比](../total_return/broad_market/figures/test_equity.png)
 
 [净值图PDF](../total_return/broad_market/figures/test_equity.pdf) · [研究过程合并图](../total_return/broad_market/figures/combined_annual.png) · [合并图PDF](../total_return/broad_market/figures/combined_annual.pdf)
+
+## 复现策略
+
+[冻结冠军 #478 源码](frozen_strategy.py) · [事后比较方案 #162 源码](posthoc_strategy.py) · [已验证的运行结果](reproduction.json)
+
+在仓库根目录执行，使用Python 3.12+，建议在虚拟环境中安装依赖：
+
+```sh
+python3 -m pip install -r examples/studies/broad_market/requirements.txt
+python3 examples/studies/broad_market/replay.py
+```
+
+默认复现两份策略的验证集与测试集，直接打印累计收益、年化收益及最大回撤。
+脚本重新使用2010—2019年的训练数据拟合策略，从历史行情生成订单，再与归档核对；
+不会使用归档订单决定交易。188笔订单与3,248条日净值均已验证一致。
+
+结果写入 `results/broad-market/`：`README.md` 可直接查看摘要，`summary.json` 包含指标与核对误差，
+`equity.csv` 为每日净值，`orders.json` 为重新生成的订单。复现不需要网络或API密钥。
+若只想运行首页方案的测试期：
+
+```sh
+python3 examples/studies/broad_market/replay.py --strategy posthoc --partition test --output results/broad-market-162
+```
+
+`--strategy frozen` 对应 #478，`posthoc` 对应 #162；后者是事后测试比较方案，不是冻结冠军。
+默认容许的数值误差为 `1e-8`；任何订单日期、标的、权重或日净值不匹配都会报错。
+
+```text
+examples/studies/broad_market/
+├── frozen_strategy.py / posthoc_strategy.py  # 两份原始策略快照
+├── engine.py                               # 原始评估器
+├── replay.py / requirements.txt             # 复现入口与固定依赖
+├── data/prices.csv                          # 2010—2026完整行情
+├── data/universe.json                       # 标的与来源说明
+├── manifest.json                           # 文件哈希和评估协议
+└── reproduction.json                        # 已核对的复现结果
+```
+
+源码、评估器和完整行情均与冻结归档逐字节一致。行情包含4,055个交易日、24个可选标的及1个仅供参考的序列，
+保留上市前和缺失报价的空值。验证与测试使用的行情与统一全收益报告完全相同；信号只使用当日及此前信息，
+各分区从独立策略状态和现金净值1开始。该独立入口复现已公开实验，不重新启动20小时搜索，
+也不修改历史冻结记录；这两份多标的策略不能直接替换最简运行器的默认单指数策略。
 
 ## 结果
 

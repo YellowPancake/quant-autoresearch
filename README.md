@@ -34,7 +34,7 @@ Benchmarks use a backward-adjusted ChiNext ETF and the CSI 300 total-return inde
 with a 0.03% purchase fee, no rebalancing and no terminal sale.
 #162 was selected post hoc among 18 milestones; it did not replace the frozen strategy.
 
-[Broad-market study notes and chart data](examples/studies/broad_market/README.md)
+[Broad-market strategy sources, complete data and replay commands](examples/studies/broad_market/README.md#reproduce-the-strategies)
 
 ### CSI 300
 

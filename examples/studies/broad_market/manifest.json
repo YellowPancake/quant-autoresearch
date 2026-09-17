@@ -1,0 +1,59 @@
+{
+  "study": "broad_market_20h_source_replay",
+  "roles": {
+    "frozen": {
+      "attempt": "0478",
+      "file": "frozen_strategy.py"
+    },
+    "posthoc": {
+      "attempt": "0162",
+      "file": "posthoc_strategy.py"
+    }
+  },
+  "periods": {
+    "train": [
+      "2010-01-01",
+      "2019-12-31"
+    ],
+    "validation": [
+      "2020-01-01",
+      "2022-12-31"
+    ],
+    "test": [
+      "2023-01-01",
+      "2026-09-11"
+    ]
+  },
+  "fee_per_side": 0.0003,
+  "initial_equity": 1,
+  "execution": "signal at close t; execute at close t+1",
+  "terminal_liquidation": false,
+  "cash_interest": 0,
+  "budget_seconds": 72000,
+  "dependencies": {
+    "python": ">=3.12",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  },
+  "provenance": {
+    "strategy_sources": "Byte-identical original attempt snapshots 0162 and 0478",
+    "engine_source": "Byte-identical original frozen broad-market evaluator",
+    "prices_source": "Byte-identical frozen full-history panel, 4055 sessions and 25 columns (24 selectable, one reference-only)",
+    "research_panel_sha256": "e73a3995651f731c2fb51b0a6464338281ac94ab97015904340363bb2fe50ba7",
+    "universe_source": "Published source metadata; selectable flags match the original frozen universe. Absolute local paths removed.",
+    "preprocessing": "Exchange sessions only; pre-launch index rows masked in the panel; missing quotes remain missing; no synthetic execution fills."
+  },
+  "files": {
+    "frozen_strategy.py": "3b14f28ae3cf04eabfedc6ddca1cdf6b772c948c802891b14217616bd90978be",
+    "posthoc_strategy.py": "ef6f644748afd53499f0e174fc6288a30e9d1ecfcd124fb943245609c62b28a4",
+    "engine.py": "8fe07c00de09967527b797407db22e8db1c9f679c294a2b6e82592c1cd2b1ca8",
+    "data/prices.csv": "611c754afeb177080d420c9fb1c73b23b6a0ddc3e595b893cdab54e7b3869e5d",
+    "data/universe.json": "50e6a5b129e72eb5a3e7aa5138b1c7b25847f31f9ee1814e8abfd876634eeb4b",
+    "../total_return/broad_market/orders.json": "d462e7bb1423c56d235fa6639111b8b1388233d7099f973c78b58d3f0e86524b",
+    "../total_return/broad_market/archived_equity.csv": "f5b443593c0e2dcf0524c122a8cbd975fe4bc68c6eaad0ea0152fb1951b396d3",
+    "../total_return/broad_market/results.json": "ca3dee64683ffd5dbe2549d5becc9ee236b1ab032bb34b9d6bd5e91e3f20021c",
+    "../total_return/data/china_total_return.csv": "f91973f2b6b702237103a126a38a5c80662a7430b878765d7e8e55d02fe44c75",
+    "replay.py": "b5925d91b157fcfe02640b6ea288246ea5e04b6c1cc6ff730fca142b22eadf2d",
+    "requirements.txt": "d7dbc02bd8804e00c9e71c282a89c72cb9d8f0754835077468ac08de74f79d4d"
+  }
+}

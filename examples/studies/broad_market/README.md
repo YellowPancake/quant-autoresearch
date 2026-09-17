@@ -4,12 +4,61 @@
 
 A 20-hour research budget produced 488 attempts: 484 completed backtests,
 4 failures and 18 historical validation champions. The Agent researches asset
-selection and portfolio allocation across 24 indices and ETF proxies. This release includes only
-the latest figure and its supporting data.
+selection and portfolio allocation across 24 indices and ETF proxies. This release includes
+both strategy sources, complete training/evaluation prices and a source-level replay entry point.
 
 ![Broad-market strategy versus two buy-and-hold benchmarks](../total_return/broad_market/figures/test_equity.png)
 
 [Equity chart PDF](../total_return/broad_market/figures/test_equity.pdf) · [Research progress composite](../total_return/broad_market/figures/combined_annual.png) · [Composite PDF](../total_return/broad_market/figures/combined_annual.pdf)
+
+## Reproduce the strategies
+
+[Frozen champion #478 source](frozen_strategy.py) · [Post-hoc selection #162 source](posthoc_strategy.py) · [Verified run results](reproduction.json)
+
+From the repository root, using Python 3.12+; a virtual environment is recommended:
+
+```sh
+python3 -m pip install -r examples/studies/broad_market/requirements.txt
+python3 examples/studies/broad_market/replay.py
+```
+
+By default, both strategies are refitted on 2010–2019 training prices and run on
+validation and test. Cumulative return, CAGR and maximum drawdown are printed directly.
+Orders are generated from the strategy and price history; archived orders are used
+only for verification afterward. All 188 orders and 3,248 daily NAVs were reproduced.
+
+Outputs go to `results/broad-market/`: `README.md` provides the summary,
+`summary.json` includes metrics and verification errors, `equity.csv` contains daily
+NAV, and `orders.json` contains regenerated orders. Replay needs no network or API key.
+To run only the homepage selection on the test period:
+
+```sh
+python3 examples/studies/broad_market/replay.py --strategy posthoc --partition test --output results/broad-market-162
+```
+
+`--strategy frozen` selects #478; `posthoc` selects #162, which remains a retrospective
+test comparison, not the frozen champion. The numerical tolerance is `1e-8`;
+any mismatch in order dates, assets, weights or daily NAV raises an error.
+
+```text
+examples/studies/broad_market/
+├── frozen_strategy.py / posthoc_strategy.py  # original strategy snapshots
+├── engine.py                               # original evaluator
+├── replay.py / requirements.txt             # entry point and pinned dependencies
+├── data/prices.csv                          # full 2010–2026 history
+├── data/universe.json                       # instruments and provenance
+├── manifest.json                           # hashes and evaluation protocol
+└── reproduction.json                        # verified reproduction results
+```
+
+Strategies, evaluator and full price panel are byte-identical to the frozen archives.
+The panel contains 4,055 sessions, 24 selectable assets and one reference-only series,
+preserving pre-launch and missing quotes. Evaluation prices exactly match the unified
+total-return report. Decisions use only current/past observations; each partition
+starts with fresh strategy state and cash NAV 1. This separate entry point replays
+published research, without restarting the 20-hour search or modifying frozen records.
+These multi-asset strategies are not drop-in replacements for the minimal runner's
+default single-index strategy.
 
 ## Results
 

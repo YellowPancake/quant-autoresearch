@@ -94,12 +94,26 @@ dividends; they are never added a second time.
 
 Only returns and accounting are changed. Single-index models still fit the
 original price-index training labels and generate decisions from original OHLC
-history; broad-market orders are replayed from the frozen archives. No test-driven
+history. The shared accounting audit replays broad-market archived orders; the source
+replay below independently regenerates #478 and #162 from training prices. No test-driven
 retuning, signal reconstruction from future prices or changes to frozen runs occur.
 Execution, fees, valuation, annualization and the SPY proxy all differ from parts
 of the original reports; differences must not be attributed solely to dividends.
 
 ## Strategies and reproduction
+
+Broad-market sources and complete data are now included: [frozen #478](broad_market/frozen_strategy.py)
+and [post-hoc #162](broad_market/posthoc_strategy.py). Refit and regenerate both from
+prices (Python 3.12+, NumPy and pandas):
+
+```sh
+python3 -m pip install -r examples/studies/broad_market/requirements.txt
+python3 examples/studies/broad_market/replay.py
+```
+
+The command prints results and writes a readable summary, daily NAV and orders to
+`results/broad-market/`. [Source replay guide](broad_market/README.md#reproduce-the-strategies)
+and [verified results](broad_market/reproduction.json) document all 188 orders and 3,248 daily NAV checks.
 
 Archived code: [CSI 300 #178](csi300/frozen_strategy.py), [CSI 300 #84](csi300/posthoc_strategy.py),
 [S&P 500 #215](sp500/frozen_strategy.py), [former S&P 500 selection #15](sp500/posthoc_strategy.py).

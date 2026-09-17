@@ -20,3 +20,15 @@ jobs:
           python examples/studies/total_return/evaluate.py --market broad_market
           python examples/studies/total_return/evaluate.py --market sp500
           python -m unittest discover -s examples/studies/total_return -p 'test_*.py' -v
+  broad-market-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: examples/studies/broad_market/requirements.txt
+      - run: python -m pip install -r examples/studies/broad_market/requirements.txt
+      - run: python examples/studies/broad_market/replay.py
+      - run: python -m unittest discover -s examples/studies/broad_market -p 'test_*.py' -v

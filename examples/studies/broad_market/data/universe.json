@@ -1,0 +1,212 @@
+{
+  "bank": {
+    "name": "银行全收益（仅基准）",
+    "selectable": false,
+    "kind": "total_return_index_proxy",
+    "source": "archived bank total-return proxy; not selectable",
+    "source_sha256": "7bae6aa36b2aed147d442578f8b0e9475d21c6b123083a06a2728c5d44e812a8",
+    "sha256": "aa6536d714eb96720ec43717b0edf19a4f58621a594f4bed1c930498d9decb1e"
+  },
+  "bse50": {
+    "code": "899050CNY01",
+    "name": "北证50全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2022-11-21",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=899050CNY01&startDate=20100101&endDate=20260911",
+    "sha256": "0addc75e427c0deb89b1e6de5fdecf273d891953c9c5637fd27214a0fb9f5727"
+  },
+  "chinext50": {
+    "code": "sz159949",
+    "name": "创业板50ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "33715a6f31907a3027e197acec13418e803baebb6d0ddcc9fe23d8f1eb64a811"
+  },
+  "cni2000": {
+    "code": "sz159628",
+    "name": "国证2000ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "7233aa043cad39cab26292e1071feb878822e3bff6c00a999f253a454fcc3211"
+  },
+  "csi100": {
+    "code": "H00903",
+    "name": "中证A100全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2006-05-29",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00903&startDate=20100101&endDate=20260911",
+    "sha256": "7f91bd3c1722f8b177d67287f9559e0ca81c1cc92c53123bd59c4f99f5eabcfd"
+  },
+  "csi1000": {
+    "code": "H00852",
+    "name": "中证1000全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2014-10-17",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00852&startDate=20100101&endDate=20260911",
+    "sha256": "6f65c8a1eb37fe6f5947cfac30a522384ff67f04f77b009b34de136a8c28cadb"
+  },
+  "csi2000": {
+    "code": "sh562660",
+    "name": "中证2000ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "a6500c46df91db8c71f6d6a1248bd63815484c785d7b10f81d5054a5832a8007"
+  },
+  "csi300": {
+    "code": "H00300",
+    "name": "沪深300全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2005-04-08",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00300&startDate=20100101&endDate=20260911",
+    "sha256": "0bdcfc6a8188ef052601af81a2f0c6b44e7afbfce2d4bccf8a920574a7af89ad"
+  },
+  "csi500": {
+    "code": "H00905",
+    "name": "中证500全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2007-01-15",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00905&startDate=20100101&endDate=20260911",
+    "sha256": "88826a48db97a5e0401c354959f174530e1c837d9bdf3b905357342420cbf58b"
+  },
+  "csi800": {
+    "code": "H00906",
+    "name": "中证800全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2007-01-15",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00906&startDate=20100101&endDate=20260911",
+    "sha256": "5b4c7605c50924fd33e3f792c38baab9ad884cb2af62a03e2e1e87815497d53b"
+  },
+  "csi_a50": {
+    "code": "sz159593",
+    "name": "中证A50ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "910de33003d0e440c48ad36352a5463726e6ee318c6ca9307b4a4423a8e8c131"
+  },
+  "csi_a500": {
+    "code": "sz159338",
+    "name": "中证A500ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "fe28655830513ae2f3bad18138fb575a688effc0c7b9f096ca12065970111fcf"
+  },
+  "csi_all": {
+    "code": "H00985",
+    "name": "中证全指全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2011-08-02",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00985&startDate=20100101&endDate=20260911",
+    "sha256": "46ad0c9437b25422bbb21fa64300e000f19b9fe9f483addf1e6b77b2db8fd961"
+  },
+  "dividend": {
+    "name": "中证红利全收益",
+    "selectable": true,
+    "kind": "total_return_index_proxy",
+    "source": "China Securities Index total-return history",
+    "source_sha256": "ae4692df15b4837ceac893e8a0f04f4c8bd75133739661f249298812df5dd672",
+    "sha256": "d26a06fce85b370cf943ae9a4903df2a8f8f703c5ab5d3c93f77b0b997ad807d"
+  },
+  "growth": {
+    "name": "创业板ETF159915后复权",
+    "selectable": true,
+    "kind": "hfq_etf",
+    "source": "Tencent adjusted ETF history",
+    "source_sha256": "28d26215cfa4398019b1505423080f056fa341a42a20b0c4e07b7e0afa93dde6",
+    "sha256": "65e5ed06d5fae2263c94c9adfa242d4784d53d1038c16ebf777cbd2ec2320826"
+  },
+  "lowvol": {
+    "name": "中证红利低波全收益",
+    "selectable": true,
+    "kind": "total_return_index_proxy",
+    "source": "China Securities Index total-return history",
+    "source_sha256": "7bb4839360fabdf15d478c7afe81a0c30d08aab5973f5515079f262aa4a00da1",
+    "sha256": "09367cd25db29c829ff09d80cd9737d9fc82d1d15a268dde11d2cf35449c47a4"
+  },
+  "sme100": {
+    "code": "sz159902",
+    "name": "中小100ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "a70c208d7a70f32a2a330f386d8edb32033d3c712e1779499d6a6811c614ba15"
+  },
+  "sse180": {
+    "code": "H00010",
+    "name": "上证180全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2002-07-01",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00010&startDate=20100101&endDate=20260911",
+    "sha256": "d331e9356e9f4f69d2f41034bebfbb849680926576223cec730348cc0dc11a44"
+  },
+  "sse50": {
+    "code": "H00016",
+    "name": "上证50全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2004-01-02",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00016&startDate=20100101&endDate=20260911",
+    "sha256": "ddbf3b5cbd84e1f639cc038ee2cfe12f0a86fb8edd8a72afebc31e1a56babf44"
+  },
+  "ssecomp": {
+    "code": "sh510210",
+    "name": "上证综指ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "f3cf2f6559547c95a2cc51e4e8947b4eb9f6003cb1c62dfd2cba82848113ea67"
+  },
+  "star100": {
+    "code": "sh588030",
+    "name": "科创100ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "26bfd92c3a606ae1eea4b48285029292491f77b431c7fb5fe7a1b2f92aca93af"
+  },
+  "star50": {
+    "code": "000688CNY01",
+    "name": "科创50全收益",
+    "kind": "total_return_index_proxy",
+    "launch": "2020-07-23",
+    "selectable": true,
+    "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000688CNY01&startDate=20100101&endDate=20260911",
+    "sha256": "69b86f9f20ea053fba008e52017e7af2fdb7e785c664090632d2499323a8f69e"
+  },
+  "sz100": {
+    "code": "sz159901",
+    "name": "深证100ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "e65e2eb3dd1125950e8eb391c9d8d22706db4a90298483587346fe093c15dfe5"
+  },
+  "szcomponent": {
+    "code": "sz159903",
+    "name": "深证成指ETF",
+    "kind": "hfq_etf",
+    "selectable": true,
+    "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+    "sha256": "f0f38377dfe0c01917426e51002ecc049425546e45fef8464ddd2c0141d623d7"
+  },
+  "value300": {
+    "name": "沪深300价值全收益",
+    "selectable": true,
+    "kind": "total_return_index_proxy",
+    "source": "China Securities Index total-return history",
+    "source_sha256": "e351f607ffe3844316d7779fd1ecf64366c09de857f4008b991b8be983615238",
+    "sha256": "79d6824ed528c946ee60109ebbf5be46cb44ea6db35962464ee5061989686e3d"
+  }
+}
