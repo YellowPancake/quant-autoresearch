@@ -43,4 +43,6 @@ and budget before preparing if they do not fit your dataset or research question
 
 Completed CSI300 and S&P 500 studies include charts, archived strategies and a
 standalone replay command. See [results and strategy examples](studies/README.md).
+The latest [broad-market study](studies/broad_market/README.md) publishes its final
+figure and supporting chart data.
 Synthetic prices remain only for software testing.

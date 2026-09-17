@@ -2,11 +2,22 @@
 
 [中文](README.zh-CN.md)
 
-Two fixed-protocol studies, including the unsuccessful S&P 500 result. These are
+Three fixed-protocol studies, including the unsuccessful S&P 500 result. These are
 historical research records, not an assertion that automated search reliably beats
 buy-and-hold.
 
-## Results
+## Latest study: broad-market indices
+
+A 20-hour budget, 488 attempts and 18 historical validation champions.
+Frozen strategy #478 returned 23.33% test CAGR with 31.00% maximum drawdown;
+post-hoc selection #162 returned 31.24% test CAGR with 30.05% maximum drawdown.
+
+[Latest figure, evaluation conventions and chart data](broad_market/README.md)
+
+The sections below archive CSI 300 and S&P 500 results, strategies and replay commands.
+Costs and execution conventions for the broad-market study are documented separately.
+
+## Single-index results
 
 Training: 2010–2019. Validation: 2020–2022. Test: 2023–September 11, 2026.
 All figures include 0.05% transaction costs per side.

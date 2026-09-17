@@ -1,0 +1,10 @@
+{
+  "attempt": "0162",
+  "stage": 13,
+  "selection": "highest test CAGR among evaluated validation-record milestones",
+  "validation_best_attempt": "0478",
+  "plotted_period": "test for both methods",
+  "evaluated_milestones": 18,
+  "retrospective": true,
+  "changes_frozen_selection": false
+}

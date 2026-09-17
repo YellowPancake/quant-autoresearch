@@ -13,41 +13,46 @@ to quantitative strategy research.
 
 ## Research examples
 
-Two markets, one research workflow. Test period: 2023–September 11, 2026;
-transaction costs: 0.05% per side.
+The homepage features broad-market index and CSI 300 studies, each with a
+20-hour research budget. Test period: 2023–September 11, 2026;
+costs and execution conventions are documented for each study.
 
-The curves show the **highest test-return strategy among each study's historical
-validation champions**, selected post hoc. They illustrate the search results;
-the frozen research champions are reported separately below.
+### Broad-market indices · Latest study
+
+488 attempts and 18 historical validation champions. Both curves in the top panel
+are test results: orange is the frozen validation champion #478; blue is #162,
+selected post hoc for the highest test return among the 18 milestones.
+
+![Latest broad-market study: test returns, annualized returns and drawdown](examples/studies/broad_market/figures/combined_annual_return.png)
+
+#162: **+172.52%** test cumulative return, **31.24%** CAGR and **30.05%** maximum drawdown.
+Frozen strategy #478: **+116.70%** test cumulative return, **23.33%** CAGR and **31.00%** maximum drawdown.
+Costs: 0.03% per side. The post-hoc comparison did not replace the frozen strategy.
+
+[Broad-market study notes and chart data](examples/studies/broad_market/README.md)
 
 ### CSI 300
 
 ![CSI 300 strategy versus buy-and-hold on the test set](examples/studies/csi300/figures/test_equity.png)
 
 Strategy #84: **+62.07%** cumulative return vs **+16.04%** buy-and-hold;
-maximum drawdown **16.06%** vs **25.98%**.
-
-### S&P 500
-
-![S&P 500 strategy versus buy-and-hold on the test set](examples/studies/sp500/figures/test_equity.png)
-
-Strategy #15: **+106.16%** cumulative return vs **+98.66%** buy-and-hold;
-maximum drawdown **19.25%** for both.
+maximum drawdown **16.06%** vs **25.98%**. Costs: 0.05% per side.
+This curve likewise shows the historical validation champion with the highest
+test return, selected post hoc.
 
 ### Frozen research champions
 
 The strategies selected on validation and frozen before final testing:
 
-| Market | Attempts | Frozen strategy: test CAGR / drawdown | Buy-and-hold: test CAGR / drawdown |
-|---|---:|---:|---:|
-| CSI 300 | 178 | 13.21% / 18.15% | 4.28% / 25.98% |
-| S&P 500 | 316 | 17.67% / 16.16% | 20.59% / 19.25% |
+| Study | Attempts | Frozen strategy | Test CAGR | Test max drawdown |
+|---|---:|---|---:|---:|
+| Broad-market indices | 488 | #478 | 23.33% | 31.00% |
+| CSI 300 | 178 | #178 | 13.21% | 18.15% |
 
-CSI 300 outperformed its baseline in this test. S&P 500 did not meet its
-return-first objective. Note that continued improvements on the validation set may
+Note that continued improvements on the validation set may
 not consistently translate into better test performance, so monitor for overfitting.
 
-[Charts, strategy explanations and replay commands](examples/studies/README.md)
+[All studies (including S&P 500), strategy explanations and replay commands](examples/studies/README.md)
 
 ## How it works
 
