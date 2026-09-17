@@ -1,0 +1,20 @@
+{
+  "chinext_close": {
+    "source_file_sha256": "65e5ed06d5fae2263c94c9adfa242d4784d53d1038c16ebf777cbd2ec2320826",
+    "instrument": "ChiNext ETF 159915, backward-adjusted",
+    "provider": "Tencent historical ETF prices"
+  },
+  "csi300_close": {
+    "source_file_sha256": "0bdcfc6a8188ef052601af81a2f0c6b44e7afbfce2d4bccf8a920574a7af89ad",
+    "instrument": "CSI 300 total-return index H00300",
+    "provider": "China Securities Index"
+  },
+  "selectable_instruments": 24,
+  "fee_per_side": 0.0003,
+  "initial_equity": 1,
+  "signal_date": "2023-01-03",
+  "buy_date": "2023-01-04",
+  "end_date": "2026-09-11",
+  "execution": "Buy at the next session close after the initial signal; retain units without rebalancing or terminal sale.",
+  "benchmark_closes_sha256": "7421d7f32cfd25898ef3cd873dd6a809d899546b7e1df1fa812cb2eb660c1429"
+}

@@ -19,15 +19,18 @@ costs and execution conventions are documented for each study.
 
 ### Broad-market indices · Latest study
 
-488 attempts and 18 historical validation champions. Both curves in the top panel
-are test results: orange is the frozen validation champion #478; blue is #162,
-selected post hoc for the highest test return among the 18 milestones.
+The Agent researches asset selection and portfolio allocation across a pool of
+24 indices and ETF proxies: 488 attempts and 18 historical validation champions
+within a 20-hour budget. The chart compares post-hoc selection #162 with ChiNext
+and CSI 300 buy-and-hold, all starting from a net asset value of 1.
 
-![Latest broad-market study: test returns, annualized returns and drawdown](examples/studies/broad_market/figures/combined_annual_return.png)
+![Broad-market strategy versus ChiNext and CSI 300 buy-and-hold](examples/studies/broad_market/figures/test_equity.png)
 
 #162: **+172.52%** test cumulative return, **31.24%** CAGR and **30.05%** maximum drawdown.
-Frozen strategy #478: **+116.70%** test cumulative return, **23.33%** CAGR and **31.00%** maximum drawdown.
-Costs: 0.03% per side. The post-hoc comparison did not replace the frozen strategy.
+Over the same period, ChiNext buy-and-hold returned **+47.32%** and CSI 300 **+28.13%**.
+Benchmarks use a backward-adjusted ChiNext ETF and the CSI 300 total-return index,
+with a 0.03% purchase fee, no rebalancing and no terminal sale.
+#162 was selected post hoc among 18 milestones; it did not replace the frozen strategy.
 
 [Broad-market study notes and chart data](examples/studies/broad_market/README.md)
 

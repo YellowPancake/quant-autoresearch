@@ -3,11 +3,12 @@
 [English](README.md) · [全部实验](../README.zh-CN.md)
 
 20小时研究预算，共488次尝试，其中484次完成回测、4次失败，产生18个历史验证冠军节点。
+在24个指数及ETF代理构成的候选池中筛选标的、研究组合配置。
 这里只发布最新图及其数据。
 
-![宽基指数最新实验结果](figures/combined_annual_return.png)
+![宽基策略与两种买入持有基准的净值对比](figures/test_equity.png)
 
-[下载PDF](figures/combined_annual_return.pdf)
+[净值图PDF](figures/test_equity.pdf) · [研究过程合并图](figures/combined_annual_return.png) · [合并图PDF](figures/combined_annual_return.pdf)
 
 ## 结果
 
@@ -16,8 +17,20 @@
 | #478 | 验证集选出并冻结 | 43.75% | 116.70% | 23.33% | 31.00% |
 | #162 | 事后比较的测试收益最高节点 | 37.14% | 172.52% | 31.24% | 30.05% |
 
-顶部两条曲线均为同一测试期的累计净收益。下方展示18个节点的验证、测试年化收益和最大回撤；
+净值图比较 #162、创业板买入持有和沪深300买入持有，三条曲线起点均为1。
+研究过程合并图使用相同的净值对比，下方展示18个节点的验证、测试年化收益和最大回撤；
 Stage是节点顺序，不代表相等的实验次数或研究耗时。
+
+| 测试期方案 | 累计收益 | 年化收益 | 最大回撤 |
+|---|---:|---:|---:|
+| #162（事后比较） | 172.52% | 31.24% | 30.05% |
+| 创业板买入持有 | 47.32% | 11.08% | 40.88% |
+| 沪深300买入持有 | 28.13% | 6.95% | 22.41% |
+
+创业板使用159915 ETF后复权行情，沪深300使用H00300全收益指数，均取自本次实验的数据。
+两条基准在2023年1月3日收盘发出买入指令，1月4日收盘全仓买入，扣除0.03%买入费用，
+之后保持份额不变，期末不卖出。费用已保留在净值中，没有在买入后重新归一化。
+这里沪深300的全收益口径与单指数示例的价格指数口径不同，因此买入持有收益也不同。
 
 #162从18个已评估的历史验证冠军中事后选出，不代表全部488次尝试均接受测试，
 也没有替换最终冻结策略 #478。#478测试年化未达到30%目标，回撤也超过其对应约28.00%的上限。
@@ -47,9 +60,18 @@ Stage是节点顺序，不代表相等的实验次数或研究耗时。
 
 ## 图表数据
 
-- [best_methods_test_curves.csv](best_methods_test_curves.csv)：两条测试曲线；`strategy_return` 为 #162累计收益，`validation_best_test_return` 为 #478累计收益。
+- [figures/test_equity.csv](figures/test_equity.csv)：图中的三条每日净值曲线。
+- [figures/comparison_metrics.json](figures/comparison_metrics.json)：三种方案的累计收益、年化收益与最大回撤。
+- [benchmark_closes.csv](benchmark_closes.csv)、[benchmark_sources.json](benchmark_sources.json)：基准价格与来源、哈希、计算口径。
+- [best_methods_test_curves.csv](best_methods_test_curves.csv)：原始策略曲线归档，保留 #162及 #478；当前图不展示 #478。
 - [stage_metrics.csv](stage_metrics.csv)：18个历史验证冠军节点的指标与约束判定。
 - [presentation_selection.json](presentation_selection.json)：图中策略的选择方式与角色。
 
-图件直接来自完成后的实验归档，没有重新搜索策略或重跑最终测试。
+策略曲线来自已完成的归档，新增基准只计算一次买入后持有的表现，没有重新搜索策略或重跑策略的最终测试。
+重新计算基准并绘图（需要Matplotlib）：
+
+```sh
+python3 examples/studies/broad_market/plot.py --output /tmp/broad-market-figures
+```
+
 本目录只发布图表和汇总数据，不提供宽基实验的策略回放入口；上级目录的 `replay.py` 仍只支持沪深300和标普500。

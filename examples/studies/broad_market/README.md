@@ -3,12 +3,13 @@
 [中文](README.zh-CN.md) · [All studies](../README.md)
 
 A 20-hour research budget produced 488 attempts: 484 completed backtests,
-4 failures and 18 historical validation champions. This release includes only
+4 failures and 18 historical validation champions. The Agent researches asset
+selection and portfolio allocation across 24 indices and ETF proxies. This release includes only
 the latest figure and its supporting data.
 
-![Latest broad-market study results](figures/combined_annual_return.png)
+![Broad-market strategy versus two buy-and-hold benchmarks](figures/test_equity.png)
 
-[Download PDF](figures/combined_annual_return.pdf)
+[Equity chart PDF](figures/test_equity.pdf) · [Research progress composite](figures/combined_annual_return.png) · [Composite PDF](figures/combined_annual_return.pdf)
 
 ## Results
 
@@ -17,9 +18,24 @@ the latest figure and its supporting data.
 | #478 | Frozen validation champion | 43.75% | 116.70% | 23.33% | 31.00% |
 | #162 | Highest test-return milestone, post hoc | 37.14% | 172.52% | 31.24% | 30.05% |
 
-Both top-panel curves show cumulative net returns over the same test period.
-The lower panels show validation/test CAGR and maximum drawdown across 18 milestones.
+The equity chart compares #162 with ChiNext and CSI 300 buy-and-hold, all starting
+from 1. The research progress composite uses the same equity comparison; its lower
+panels show validation/test CAGR and maximum drawdown across 18 milestones.
 Stages indicate milestone order, not equal numbers of attempts or elapsed research time.
+
+| Test-period approach | Total return | CAGR | Max drawdown |
+|---|---:|---:|---:|
+| #162 (post hoc) | 172.52% | 31.24% | 30.05% |
+| ChiNext buy-and-hold | 47.32% | 11.08% | 40.88% |
+| CSI 300 buy-and-hold | 28.13% | 6.95% | 22.41% |
+
+ChiNext uses backward-adjusted ETF 159915 prices; CSI 300 uses the H00300 total-return
+index. Both series come from this study's data. The benchmarks signal at the close
+on January 3, 2023 and buy at the January 4 close, paying a 0.03% purchase fee.
+They retain the same units thereafter, without a terminal sale. Fees remain in the
+equity paths; no normalization after entry removes them. The CSI 300 total-return
+series differs from the price index in the single-index example, so its buy-and-hold
+return also differs.
 
 #162 was selected retrospectively from 18 evaluated validation champions; not all
 488 attempts were tested. It did not replace frozen strategy #478, whose test CAGR
@@ -53,11 +69,21 @@ are now public. Further validation requires new data that did not inform selecti
 
 ## Chart data
 
-- [best_methods_test_curves.csv](best_methods_test_curves.csv): both test paths; `strategy_return` is #162's cumulative return and `validation_best_test_return` is #478's.
+- [figures/test_equity.csv](figures/test_equity.csv): all three daily equity paths shown in the chart.
+- [figures/comparison_metrics.json](figures/comparison_metrics.json): total return, CAGR and maximum drawdown for the three approaches.
+- [benchmark_closes.csv](benchmark_closes.csv), [benchmark_sources.json](benchmark_sources.json): benchmark prices, provenance, hashes and calculation conventions.
+- [best_methods_test_curves.csv](best_methods_test_curves.csv): original #162 and #478 archives; #478 is no longer plotted.
 - [stage_metrics.csv](stage_metrics.csv): metrics and constraint checks for all 18 historical validation champions.
 - [presentation_selection.json](presentation_selection.json): plotted strategy roles and selection method.
 
-The figure was copied directly from the completed study archive, without searching
-for new strategies or rerunning final tests. This directory publishes charts and
+The strategy path comes from the completed archive. Only the two buy-once benchmarks
+were calculated; no new strategy search or strategy final-test replay was performed.
+Recalculate benchmarks and redraw the figures (requires Matplotlib):
+
+```sh
+python3 examples/studies/broad_market/plot.py --output /tmp/broad-market-figures
+```
+
+This directory publishes charts and
 summary data only; the parent directory's `replay.py` still supports only CSI 300
 and S&P 500, not this broad-market study.

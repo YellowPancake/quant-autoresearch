@@ -1,0 +1,17 @@
+{
+  "strategy_equity": {
+    "total_return": 1.7251996248160624,
+    "annual_return": 0.31237929415699717,
+    "max_drawdown": 0.30046371504105696
+  },
+  "chinext_equity": {
+    "total_return": 0.47318145719164506,
+    "annual_return": 0.11076736502999251,
+    "max_drawdown": 0.4088093599449415
+  },
+  "csi300_equity": {
+    "total_return": 0.28125807610763975,
+    "annual_return": 0.06951269527948467,
+    "max_drawdown": 0.22409270744694854
+  }
+}

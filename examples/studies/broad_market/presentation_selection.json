@@ -3,8 +3,14 @@
   "stage": 13,
   "selection": "highest test CAGR among evaluated validation-record milestones",
   "validation_best_attempt": "0478",
-  "plotted_period": "test for both methods",
+  "plotted_period": "same test dates for strategy and both buy-and-hold benchmarks",
   "evaluated_milestones": 18,
   "retrospective": true,
-  "changes_frozen_selection": false
+  "changes_frozen_selection": false,
+  "plotted_series": [
+    "strategy_0162",
+    "chinext_buy_and_hold",
+    "csi300_buy_and_hold"
+  ],
+  "normalization": "Initial capital 1; fees included; no re-basing after entry"
 }
