@@ -27,8 +27,12 @@ and CSI 300 buy-and-hold, all starting from a net asset value of 1.
 
 ![Broad-market strategy versus ChiNext and CSI 300 buy-and-hold](examples/studies/total_return/broad_market/figures/test_equity.png)
 
-#162: **+172.52%** test cumulative return, **31.24%** CAGR and **30.05%** maximum drawdown.
-Over the same period, ChiNext buy-and-hold returned **+47.32%** and CSI 300 **+28.13%**.
+| Test-period approach | Cumulative return | CAGR | Maximum drawdown |
+|---|---:|---:|---:|
+| Broad-market strategy #162 (post hoc) | **+172.52%** | **31.24%** | **30.05%** |
+| ChiNext ETF buy-and-hold | +47.32% | 11.08% | 40.88% |
+| CSI 300 TR buy-and-hold | +28.13% | 6.95% | 22.41% |
+
 Benchmarks use a backward-adjusted ChiNext ETF and the CSI 300 total-return index,
 with a 0.03% purchase fee, no rebalancing and no terminal sale.
 #162 was selected post hoc among 18 milestones; it did not replace the frozen strategy.
