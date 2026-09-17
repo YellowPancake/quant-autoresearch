@@ -15,7 +15,8 @@ to quantitative strategy research.
 
 The homepage features broad-market index and CSI 300 studies, each with a
 20-hour research budget. Test period: 2023–September 11, 2026;
-costs and execution conventions are documented for each study.
+all displayed results use dividends reinvested, next-close execution,
+0.03% costs per side and calendar-day CAGR. These are fixed-strategy reevaluations.
 
 ### Broad-market indices · Latest study
 
@@ -24,7 +25,7 @@ The Agent researches asset selection and portfolio allocation across a pool of
 within a 20-hour budget. The chart compares post-hoc selection #162 with ChiNext
 and CSI 300 buy-and-hold, all starting from a net asset value of 1.
 
-![Broad-market strategy versus ChiNext and CSI 300 buy-and-hold](examples/studies/broad_market/figures/test_equity.png)
+![Broad-market strategy versus ChiNext and CSI 300 buy-and-hold](examples/studies/total_return/broad_market/figures/test_equity.png)
 
 #162: **+172.52%** test cumulative return, **31.24%** CAGR and **30.05%** maximum drawdown.
 Over the same period, ChiNext buy-and-hold returned **+47.32%** and CSI 300 **+28.13%**.
@@ -36,21 +37,22 @@ with a 0.03% purchase fee, no rebalancing and no terminal sale.
 
 ### CSI 300
 
-![CSI 300 strategy versus buy-and-hold on the test set](examples/studies/csi300/figures/test_equity.png)
+![CSI 300 strategy versus buy-and-hold on the test set](examples/studies/total_return/csi300/figures/test_equity.png)
 
-Strategy #84: **+62.07%** cumulative return vs **+16.04%** buy-and-hold;
-maximum drawdown **16.06%** vs **25.98%**. Costs: 0.05% per side.
+Strategy #84: **+77.30%** cumulative return vs **+28.13%** buy-and-hold;
+maximum drawdown **10.96%** vs **22.41%**. Both studies use the same CSI 300 TR benchmark.
 This curve likewise shows the historical validation champion with the highest
 test return, selected post hoc.
 
 ### Frozen research champions
 
-The strategies selected on validation and frozen before final testing:
+The strategies selected on validation and frozen before final testing,
+reevaluated under the common accounting convention without retuning:
 
 | Study | Attempts | Frozen strategy | Test CAGR | Test max drawdown |
 |---|---:|---|---:|---:|
 | Broad-market indices | 488 | #478 | 23.33% | 31.00% |
-| CSI 300 | 178 | #178 | 13.21% | 18.15% |
+| CSI 300 | 178 | #178 | 12.93% | 11.59% |
 
 Note that continued improvements on the validation set may
 not consistently translate into better test performance, so monitor for overfitting.

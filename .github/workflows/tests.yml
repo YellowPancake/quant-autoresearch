@@ -14,3 +14,9 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python -m unittest -v
+      - name: Verify unified total-return accounting
+        run: |
+          python examples/studies/total_return/evaluate.py --market csi300
+          python examples/studies/total_return/evaluate.py --market broad_market
+          python examples/studies/total_return/evaluate.py --market sp500
+          python -m unittest discover -s examples/studies/total_return -p 'test_*.py' -v

@@ -7,9 +7,9 @@ A 20-hour research budget produced 488 attempts: 484 completed backtests,
 selection and portfolio allocation across 24 indices and ETF proxies. This release includes only
 the latest figure and its supporting data.
 
-![Broad-market strategy versus two buy-and-hold benchmarks](figures/test_equity.png)
+![Broad-market strategy versus two buy-and-hold benchmarks](../total_return/broad_market/figures/test_equity.png)
 
-[Equity chart PDF](figures/test_equity.pdf) · [Research progress composite](figures/combined_annual_return.png) · [Composite PDF](figures/combined_annual_return.pdf)
+[Equity chart PDF](../total_return/broad_market/figures/test_equity.pdf) · [Research progress composite](../total_return/broad_market/figures/combined_annual.png) · [Composite PDF](../total_return/broad_market/figures/combined_annual.pdf)
 
 ## Results
 
@@ -21,7 +21,7 @@ the latest figure and its supporting data.
 The equity chart compares #162 with ChiNext and CSI 300 buy-and-hold, all starting
 from 1. The research progress composite uses the same equity comparison; its lower
 panels show validation/test CAGR and maximum drawdown across 18 milestones.
-Stages indicate milestone order, not equal numbers of attempts or elapsed research time.
+The horizontal axis shows historical attempt IDs at equally spaced milestones, not elapsed research time.
 
 | Test-period approach | Total return | CAGR | Max drawdown |
 |---|---:|---:|---:|
@@ -33,9 +33,8 @@ ChiNext uses backward-adjusted ETF 159915 prices; CSI 300 uses the H00300 total-
 index. Both series come from this study's data. The benchmarks signal at the close
 on January 3, 2023 and buy at the January 4 close, paying a 0.03% purchase fee.
 They retain the same units thereafter, without a terminal sale. Fees remain in the
-equity paths; no normalization after entry removes them. The CSI 300 total-return
-series differs from the price index in the single-index example, so its buy-and-hold
-return also differs.
+equity paths; no normalization after entry removes them. The single-index example
+now uses the exact same CSI 300 total-return series and daily benchmark path.
 
 #162 was selected retrospectively from 18 evaluated validation champions; not all
 488 attempts were tested. It did not replace frozen strategy #478, whose test CAGR
@@ -63,7 +62,8 @@ translate into better test performance, so monitor for overfitting.
 | Positions | Long-only, no leverage, zero cash interest, no forced terminal liquidation |
 
 Each partition starts with cash equity of 1. Execution timing, costs and annualization
-differ from the single-index CSI 300 study; read each result with its own protocol.
+match the unified reevaluation of the single-index studies. All 29,232 archived
+broad-market daily NAVs were reproduced exactly by the common accounting engine.
 This historical test period had already appeared in prior research and the results
 are now public. Further validation requires new data that did not inform selection.
 
@@ -76,14 +76,15 @@ are now public. Further validation requires new data that did not inform selecti
 - [stage_metrics.csv](stage_metrics.csv): metrics and constraint checks for all 18 historical validation champions.
 - [presentation_selection.json](presentation_selection.json): plotted strategy roles and selection method.
 
-The strategy path comes from the completed archive. Only the two buy-once benchmarks
-were calculated; no new strategy search or strategy final-test replay was performed.
-Recalculate benchmarks and redraw the figures (requires Matplotlib):
+The strategy paths come from completed archives. Fixed orders were replayed through
+the common accounting engine without strategy search or changing frozen test records.
+Recalculate the report and redraw the figures (plotting requires Matplotlib):
 
 ```sh
-python3 examples/studies/broad_market/plot.py --output /tmp/broad-market-figures
+python3 examples/studies/total_return/evaluate.py --market broad_market
+python3 examples/studies/total_return/plot.py --market broad_market
 ```
 
-This directory publishes charts and
-summary data only; the parent directory's `replay.py` still supports only CSI 300
-and S&P 500, not this broad-market study.
+[Unified daily paths and metrics](../total_return/broad_market/) contain all 18
+milestones. The original files above remain archival records; the current chart
+uses the shared plotting code in `total_return/`.

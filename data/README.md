@@ -37,6 +37,13 @@ distribution repository, then runs the agent in the new study workspace. Do not
 grant the research agent access to these full histories or the external final holdout.
 This directory layout is not an OS security sandbox.
 
+The published [unified total-return reports](../examples/studies/README.md) keep
+their dividend-inclusive valuation series separately in `examples/studies/total_return/data/`.
+Those reports preserve the original signal inputs here while reevaluating returns;
+this directory's price-index files have not been relabeled as total-return data.
+See the report's manifest for CSI total-return / adjusted ETF sources and the explicitly
+labeled SPY proxy used for the S&P 500 study.
+
 ## Sources and limitations
 
 - CSI300: BaoStock index API, recorded as `baostock_index`. See the provider's

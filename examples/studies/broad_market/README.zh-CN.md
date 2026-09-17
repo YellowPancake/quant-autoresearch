@@ -6,9 +6,9 @@
 在24个指数及ETF代理构成的候选池中筛选标的、研究组合配置。
 这里只发布最新图及其数据。
 
-![宽基策略与两种买入持有基准的净值对比](figures/test_equity.png)
+![宽基策略与两种买入持有基准的净值对比](../total_return/broad_market/figures/test_equity.png)
 
-[净值图PDF](figures/test_equity.pdf) · [研究过程合并图](figures/combined_annual_return.png) · [合并图PDF](figures/combined_annual_return.pdf)
+[净值图PDF](../total_return/broad_market/figures/test_equity.pdf) · [研究过程合并图](../total_return/broad_market/figures/combined_annual.png) · [合并图PDF](../total_return/broad_market/figures/combined_annual.pdf)
 
 ## 结果
 
@@ -19,7 +19,7 @@
 
 净值图比较 #162、创业板买入持有和沪深300买入持有，三条曲线起点均为1。
 研究过程合并图使用相同的净值对比，下方展示18个节点的验证、测试年化收益和最大回撤；
-Stage是节点顺序，不代表相等的实验次数或研究耗时。
+横轴显示原尝试编号，各节点等间距排列，不代表相等的研究耗时。
 
 | 测试期方案 | 累计收益 | 年化收益 | 最大回撤 |
 |---|---:|---:|---:|
@@ -30,7 +30,7 @@ Stage是节点顺序，不代表相等的实验次数或研究耗时。
 创业板使用159915 ETF后复权行情，沪深300使用H00300全收益指数，均取自本次实验的数据。
 两条基准在2023年1月3日收盘发出买入指令，1月4日收盘全仓买入，扣除0.03%买入费用，
 之后保持份额不变，期末不卖出。费用已保留在净值中，没有在买入后重新归一化。
-这里沪深300的全收益口径与单指数示例的价格指数口径不同，因此买入持有收益也不同。
+沪深300单指数实验现已使用相同的全收益行情，基准净值逐日完全一致。
 
 #162从18个已评估的历史验证冠军中事后选出，不代表全部488次尝试均接受测试，
 也没有替换最终冻结策略 #478。#478测试年化未达到30%目标，回撤也超过其对应约28.00%的上限。
@@ -54,8 +54,9 @@ Stage是节点顺序，不代表相等的实验次数或研究耗时。
 | 年化口径 | 实际日历天数 / 365.2425 |
 | 仓位 | 只做多、无杠杆，现金利息为零，期末不强制清仓 |
 
-各分区从现金净值1开始。与沪深300单指数实验的开盘执行、费用及年化口径不同，
-两组结果应结合各自协议阅读。本测试时间段在此前研究中已经出现，现有结果也已公开，
+各分区从现金净值1开始，执行、费用和年化均与单指数实验的统一复评一致。
+公共评估器复核了宽基全部29,232条归档日净值，结果完全相同。
+本测试时间段在此前研究中已经出现，现有结果也已公开，
 后续验证需要新的、未参与选择的数据。
 
 ## 图表数据
@@ -67,11 +68,13 @@ Stage是节点顺序，不代表相等的实验次数或研究耗时。
 - [stage_metrics.csv](stage_metrics.csv)：18个历史验证冠军节点的指标与约束判定。
 - [presentation_selection.json](presentation_selection.json)：图中策略的选择方式与角色。
 
-策略曲线来自已完成的归档，新增基准只计算一次买入后持有的表现，没有重新搜索策略或重跑策略的最终测试。
-重新计算基准并绘图（需要Matplotlib）：
+策略曲线来自已完成的归档。固定订单通过公共评估器重放，没有重新搜索策略或修改冻结测试记录。
+重新计算报告并绘图（仅绘图需要Matplotlib）：
 
 ```sh
-python3 examples/studies/broad_market/plot.py --output /tmp/broad-market-figures
+python3 examples/studies/total_return/evaluate.py --market broad_market
+python3 examples/studies/total_return/plot.py --market broad_market
 ```
 
-本目录只发布图表和汇总数据，不提供宽基实验的策略回放入口；上级目录的 `replay.py` 仍只支持沪深300和标普500。
+[统一日净值与指标](../total_return/broad_market/)包含全部18个节点。
+上面列出的原文件保留为历史归档；当前图由 `total_return/` 的公共绘图代码生成。

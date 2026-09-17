@@ -1,0 +1,489 @@
+{
+  "market": "csi300",
+  "accounting": "total_return_next_close_v1",
+  "return_instrument": "CSI total-return indices / dividend-adjusted ETF proxies",
+  "data_file": "data/china_total_return.csv",
+  "data_sha256": "f91973f2b6b702237103a126a38a5c80662a7430b878765d7e8e55d02fe44c75",
+  "fee_per_side": 0.0003,
+  "periods": {
+    "validation": [
+      "2020-01-01",
+      "2022-12-31"
+    ],
+    "test": [
+      "2023-01-01",
+      "2026-09-11"
+    ]
+  },
+  "milestone_count": 16,
+  "frozen_attempt": "0178",
+  "posthoc_attempt": "0084",
+  "results": {
+    "0001": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.0,
+        "annual_return": 0.0,
+        "max_drawdown": 0.0
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.0,
+        "annual_return": 0.0,
+        "max_drawdown": 0.0
+      }
+    },
+    "0008": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.12707096852560706,
+        "annual_return": 0.04078326681222766,
+        "max_drawdown": 0.14598332627881438
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.01459735516477001,
+        "annual_return": 0.003937229967670763,
+        "max_drawdown": 0.17831953434954462
+      }
+    },
+    "0009": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.14244025936172244,
+        "annual_return": 0.04550457949656361,
+        "max_drawdown": 0.1398455011233587
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.19912389079784698,
+        "annual_return": 0.050471298048557545,
+        "max_drawdown": 0.12357782547260576
+      }
+    },
+    "0013": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.24218565975352768,
+        "annual_return": 0.07516185742895254,
+        "max_drawdown": 0.1607945189148109
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.2645654586482551,
+        "annual_return": 0.06571639899678283,
+        "max_drawdown": 0.20563870068472012
+      }
+    },
+    "0017": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.23378914896312608,
+        "annual_return": 0.07272782016211554,
+        "max_drawdown": 0.08724673648300862
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.11045707514106029,
+        "annual_return": 0.02881650517505352,
+        "max_drawdown": 0.04037299077120271
+      }
+    },
+    "0019": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.20953125610754286,
+        "annual_return": 0.06563322681186912,
+        "max_drawdown": 0.09832979415233722
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.16697903940707404,
+        "annual_return": 0.042759894090381056,
+        "max_drawdown": 0.11602103080801296
+      }
+    },
+    "0020": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.23535849712034684,
+        "annual_return": 0.07318358962913818,
+        "max_drawdown": 0.09148516048603061
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.25088347644597087,
+        "annual_return": 0.0625774606409557,
+        "max_drawdown": 0.05246397000428027
+      }
+    },
+    "0070": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.18587081691845198,
+        "annual_return": 0.05862150516429954,
+        "max_drawdown": 0.1555020762556657
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.31416486913526587,
+        "annual_return": 0.07689215102762348,
+        "max_drawdown": 0.10959721776878861
+      }
+    },
+    "0074": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.20223936537679288,
+        "annual_return": 0.06348210175745828,
+        "max_drawdown": 0.18601650730038655
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.5422398841633687,
+        "annual_return": 0.12465126947555882,
+        "max_drawdown": 0.10959721776878861
+      }
+    },
+    "0084": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.242459524200189,
+        "annual_return": 0.07524106236800265,
+        "max_drawdown": 0.2025715344708372
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.7729988463444575,
+        "annual_return": 0.1679867984200747,
+        "max_drawdown": 0.10959721776878861
+      }
+    },
+    "0148": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.5143111956746036,
+        "annual_return": 0.14873966076944312,
+        "max_drawdown": 0.15243669815761685
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.3612940553397963,
+        "annual_return": 0.08722996590332222,
+        "max_drawdown": 0.1460733199775932
+      }
+    },
+    "0149": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.3813481206335465,
+        "annual_return": 0.11399802033200812,
+        "max_drawdown": 0.25000309101141727
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.30523582944954186,
+        "annual_return": 0.07490322306647479,
+        "max_drawdown": 0.16075452897702114
+      }
+    },
+    "0159": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.5085226121726787,
+        "annual_return": 0.14727041841877075,
+        "max_drawdown": 0.14472969403535874
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.29576248264504956,
+        "annual_return": 0.07278217982891522,
+        "max_drawdown": 0.13333760716173626
+      }
+    },
+    "0162": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.41709902386996967,
+        "annual_return": 0.12355068520604018,
+        "max_drawdown": 0.17390230100344206
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.5924992774153561,
+        "annual_return": 0.13447336639389307,
+        "max_drawdown": 0.11594007948718643
+      }
+    },
+    "0176": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.34882615717655674,
+        "annual_return": 0.10516407299446162,
+        "max_drawdown": 0.17610591492174954
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.4754630443328398,
+        "annual_return": 0.1112335654630916,
+        "max_drawdown": 0.12111648155303045
+      }
+    },
+    "0178": {
+      "validation": {
+        "days": 728,
+        "total_return": 0.5098667250184421,
+        "annual_return": 0.14761191162335607,
+        "max_drawdown": 0.1609362723745591
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.5661205258321145,
+        "annual_return": 0.12934685549838765,
+        "max_drawdown": 0.11594007948718577
+      }
+    }
+  },
+  "baselines": {
+    "csi300": {
+      "validation": {
+        "days": 728,
+        "total_return": -0.007387340974513545,
+        "annual_return": -0.0024746880638442104,
+        "max_drawdown": 0.372078149467133
+      },
+      "test": {
+        "days": 896,
+        "total_return": 0.281258076107642,
+        "annual_return": 0.06951269527948511,
+        "max_drawdown": 0.22409270744694987
+      }
+    }
+  },
+  "assessments": {
+    "0001": {
+      "validation": {
+        "reward": 0.0,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.0,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0008": {
+      "validation": {
+        "reward": 0.12707096852560706,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.01459735516477001,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0009": {
+      "validation": {
+        "reward": 0.14244025936172244,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.19912389079784698,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0013": {
+      "validation": {
+        "reward": 0.24218565975352768,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.2645654586482551,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0017": {
+      "validation": {
+        "reward": 0.23378914896312608,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.11045707514106029,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0019": {
+      "validation": {
+        "reward": 0.20953125610754286,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.16697903940707404,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0020": {
+      "validation": {
+        "reward": 0.23535849712034684,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.25088347644597087,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0070": {
+      "validation": {
+        "reward": 0.18587081691845198,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.31416486913526587,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0074": {
+      "validation": {
+        "reward": 0.20223936537679288,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.5422398841633687,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0084": {
+      "validation": {
+        "reward": 0.242459524200189,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.7729988463444575,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0148": {
+      "validation": {
+        "reward": 0.5143111956746036,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.3612940553397963,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0149": {
+      "validation": {
+        "reward": 0.3813481206335465,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.30523582944954186,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0159": {
+      "validation": {
+        "reward": 0.5085226121726787,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.29576248264504956,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0162": {
+      "validation": {
+        "reward": 0.41709902386996967,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.5924992774153561,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0176": {
+      "validation": {
+        "reward": 0.34882615717655674,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.4754630443328398,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    },
+    "0178": {
+      "validation": {
+        "reward": 0.5098667250184421,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      },
+      "test": {
+        "reward": 0.5661205258321145,
+        "feasible": true,
+        "target_met": false,
+        "drawdown_limit": 0.5
+      }
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "protocol": "total_return_next_close_v1",
+  "fee_per_side": 0.0003,
+  "annualization": "actual calendar days / 365.2425",
+  "execution": "signal after close, next session close",
+  "initial_nav": 1,
+  "cash_interest": 0,
+  "terminal_sale": false,
+  "data": {
+    "china_total_return.csv": {
+      "sha256": "f91973f2b6b702237103a126a38a5c80662a7430b878765d7e8e55d02fe44c75",
+      "source": "unchanged prices from frozen broad-market study, evaluation periods only",
+      "instruments": {
+        "bank": {
+          "name": "银行全收益（仅基准）",
+          "selectable": false,
+          "kind": "total_return_index_proxy",
+          "source": "archived bank total-return proxy; not selectable",
+          "source_sha256": "7bae6aa36b2aed147d442578f8b0e9475d21c6b123083a06a2728c5d44e812a8",
+          "sha256": "aa6536d714eb96720ec43717b0edf19a4f58621a594f4bed1c930498d9decb1e"
+        },
+        "bse50": {
+          "code": "899050CNY01",
+          "name": "北证50全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2022-11-21",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=899050CNY01&startDate=20100101&endDate=20260911",
+          "sha256": "0addc75e427c0deb89b1e6de5fdecf273d891953c9c5637fd27214a0fb9f5727"
+        },
+        "chinext50": {
+          "code": "sz159949",
+          "name": "创业板50ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "33715a6f31907a3027e197acec13418e803baebb6d0ddcc9fe23d8f1eb64a811"
+        },
+        "cni2000": {
+          "code": "sz159628",
+          "name": "国证2000ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "7233aa043cad39cab26292e1071feb878822e3bff6c00a999f253a454fcc3211"
+        },
+        "csi100": {
+          "code": "H00903",
+          "name": "中证A100全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2006-05-29",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00903&startDate=20100101&endDate=20260911",
+          "sha256": "7f91bd3c1722f8b177d67287f9559e0ca81c1cc92c53123bd59c4f99f5eabcfd"
+        },
+        "csi1000": {
+          "code": "H00852",
+          "name": "中证1000全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2014-10-17",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00852&startDate=20100101&endDate=20260911",
+          "sha256": "6f65c8a1eb37fe6f5947cfac30a522384ff67f04f77b009b34de136a8c28cadb"
+        },
+        "csi2000": {
+          "code": "sh562660",
+          "name": "中证2000ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "a6500c46df91db8c71f6d6a1248bd63815484c785d7b10f81d5054a5832a8007"
+        },
+        "csi300": {
+          "code": "H00300",
+          "name": "沪深300全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2005-04-08",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00300&startDate=20100101&endDate=20260911",
+          "sha256": "0bdcfc6a8188ef052601af81a2f0c6b44e7afbfce2d4bccf8a920574a7af89ad"
+        },
+        "csi500": {
+          "code": "H00905",
+          "name": "中证500全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2007-01-15",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00905&startDate=20100101&endDate=20260911",
+          "sha256": "88826a48db97a5e0401c354959f174530e1c837d9bdf3b905357342420cbf58b"
+        },
+        "csi800": {
+          "code": "H00906",
+          "name": "中证800全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2007-01-15",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00906&startDate=20100101&endDate=20260911",
+          "sha256": "5b4c7605c50924fd33e3f792c38baab9ad884cb2af62a03e2e1e87815497d53b"
+        },
+        "csi_a50": {
+          "code": "sz159593",
+          "name": "中证A50ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "910de33003d0e440c48ad36352a5463726e6ee318c6ca9307b4a4423a8e8c131"
+        },
+        "csi_a500": {
+          "code": "sz159338",
+          "name": "中证A500ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "fe28655830513ae2f3bad18138fb575a688effc0c7b9f096ca12065970111fcf"
+        },
+        "csi_all": {
+          "code": "H00985",
+          "name": "中证全指全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2011-08-02",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00985&startDate=20100101&endDate=20260911",
+          "sha256": "46ad0c9437b25422bbb21fa64300e000f19b9fe9f483addf1e6b77b2db8fd961"
+        },
+        "dividend": {
+          "name": "中证红利全收益",
+          "selectable": true,
+          "kind": "total_return_index_proxy",
+          "source": "China Securities Index total-return history",
+          "source_sha256": "ae4692df15b4837ceac893e8a0f04f4c8bd75133739661f249298812df5dd672",
+          "sha256": "d26a06fce85b370cf943ae9a4903df2a8f8f703c5ab5d3c93f77b0b997ad807d"
+        },
+        "growth": {
+          "name": "创业板ETF159915后复权",
+          "selectable": true,
+          "kind": "hfq_etf",
+          "source": "Tencent adjusted ETF history",
+          "source_sha256": "28d26215cfa4398019b1505423080f056fa341a42a20b0c4e07b7e0afa93dde6",
+          "sha256": "65e5ed06d5fae2263c94c9adfa242d4784d53d1038c16ebf777cbd2ec2320826"
+        },
+        "lowvol": {
+          "name": "中证红利低波全收益",
+          "selectable": true,
+          "kind": "total_return_index_proxy",
+          "source": "China Securities Index total-return history",
+          "source_sha256": "7bb4839360fabdf15d478c7afe81a0c30d08aab5973f5515079f262aa4a00da1",
+          "sha256": "09367cd25db29c829ff09d80cd9737d9fc82d1d15a268dde11d2cf35449c47a4"
+        },
+        "sme100": {
+          "code": "sz159902",
+          "name": "中小100ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "a70c208d7a70f32a2a330f386d8edb32033d3c712e1779499d6a6811c614ba15"
+        },
+        "sse180": {
+          "code": "H00010",
+          "name": "上证180全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2002-07-01",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00010&startDate=20100101&endDate=20260911",
+          "sha256": "d331e9356e9f4f69d2f41034bebfbb849680926576223cec730348cc0dc11a44"
+        },
+        "sse50": {
+          "code": "H00016",
+          "name": "上证50全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2004-01-02",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=H00016&startDate=20100101&endDate=20260911",
+          "sha256": "ddbf3b5cbd84e1f639cc038ee2cfe12f0a86fb8edd8a72afebc31e1a56babf44"
+        },
+        "ssecomp": {
+          "code": "sh510210",
+          "name": "上证综指ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "f3cf2f6559547c95a2cc51e4e8947b4eb9f6003cb1c62dfd2cba82848113ea67"
+        },
+        "star100": {
+          "code": "sh588030",
+          "name": "科创100ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "26bfd92c3a606ae1eea4b48285029292491f77b431c7fb5fe7a1b2f92aca93af"
+        },
+        "star50": {
+          "code": "000688CNY01",
+          "name": "科创50全收益",
+          "kind": "total_return_index_proxy",
+          "launch": "2020-07-23",
+          "selectable": true,
+          "source": "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode=000688CNY01&startDate=20100101&endDate=20260911",
+          "sha256": "69b86f9f20ea053fba008e52017e7af2fdb7e785c664090632d2499323a8f69e"
+        },
+        "sz100": {
+          "code": "sz159901",
+          "name": "深证100ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "e65e2eb3dd1125950e8eb391c9d8d22706db4a90298483587346fe093c15dfe5"
+        },
+        "szcomponent": {
+          "code": "sz159903",
+          "name": "深证成指ETF",
+          "kind": "hfq_etf",
+          "selectable": true,
+          "source": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get",
+          "sha256": "f0f38377dfe0c01917426e51002ecc049425546e45fef8464ddd2c0141d623d7"
+        },
+        "value300": {
+          "name": "沪深300价值全收益",
+          "selectable": true,
+          "kind": "total_return_index_proxy",
+          "source": "China Securities Index total-return history",
+          "source_sha256": "e351f607ffe3844316d7779fd1ecf64366c09de857f4008b991b8be983615238",
+          "sha256": "79d6824ed528c946ee60109ebbf5be46cb44ea6db35962464ee5061989686e3d"
+        }
+      }
+    },
+    "spy_total_return.csv": {
+      "sha256": "e5069405c436a07bd21655ce816144e31e85410325f0f5263d1b8c9aacb5198f",
+      "instrument": "SPY ETF, dividend-adjusted close; total-return proxy, not the S&P 500 TR index",
+      "primary_provider": "Yahoo Finance, auto_adjust=True",
+      "snapshot_url": "https://github.com/bumbeishvili/tqqq.networthcast.com/blob/2dd04d8276797ec13194edbf9cf9241f7d9ff2e5/data/spy.tsv",
+      "upstream_method": "https://github.com/bumbeishvili/tqqq.networthcast.com/blob/2dd04d8276797ec13194edbf9cf9241f7d9ff2e5/update_data.py",
+      "source_sha256": "0947737a76fad8debeba9fa32d8eab8fe468a1232ba596f8958fe05b8284c98b",
+      "slice": "2020-01-02 through 2026-09-11; 1682 genuine post-inception ETF sessions, no synthetic prefix",
+      "limitation": "Fund fees and tracking differences are embedded. Index TR download was unavailable; both strategy and baseline use this same ETF series."
+    }
+  },
+  "inputs": {
+    "csi300/strategies/0001.py": "22786ea6595f6da87000c406a898250d5340a46cca4cd4bd90cc0429d6657617",
+    "csi300/strategies/0008.py": "3a5d3a0f3c91dafff3ad3526551696d14b04e6943cf91dfa9a9741199809bdf9",
+    "csi300/strategies/0009.py": "be26ed854db33b98cf2f853f111c7ee88399c77ae743986662f31725375e004e",
+    "csi300/strategies/0013.py": "e9ca2f7456ec7d46c6802e8ba73384e2c1f1c2d612d3ac26c10cae078ea93950",
+    "csi300/strategies/0017.py": "ba5ca409d7eef74bd3b08faba8d58ffd2feeaba1fcc8578c5edec52efb65e34d",
+    "csi300/strategies/0019.py": "a0740397b038872c997761a1e40059facabdb7acd464fa4187e3dc980782b38a",
+    "csi300/strategies/0020.py": "a9f12e396908fddf744c72cdf287f1027e3be2dc62072723cccd711a9fe95d7a",
+    "csi300/strategies/0070.py": "3c7a011d20c64e45909bb6b9bc72b7e1382065e2cc19b98348d4ab73da20b9d9",
+    "csi300/strategies/0074.py": "3cf0d148029295284fd0261e1e7277e7420cf026baded07b501ebb5cdb6bea85",
+    "csi300/strategies/0084.py": "25bb4a7c06d294485e7eb16e5ca573f475cbda6d7256aa6f9b80a3c374a853cb",
+    "csi300/strategies/0148.py": "ba3bbd1ff33e763bd93c934a787b2a709489a2c1ce56bb9da93aed48179ab144",
+    "csi300/strategies/0149.py": "31af21985583243e2ddc9223337688fffaa89637f5ad47f3d56d9a122b3d8829",
+    "csi300/strategies/0159.py": "116a81a85ecd93ed9c28cec6cafd28d27566f85ab746bdfe69c3a2b4e4602d6a",
+    "csi300/strategies/0162.py": "69ea7213f0462f0ea5b9d9d5b4a53605455a5e37d7819b390641f05514016057",
+    "csi300/strategies/0176.py": "484601a5655090ed08f8d4494211d98804caa63c55d3f18f80d9093834509440",
+    "csi300/strategies/0178.py": "13e74a9e5a0ca4b11533d6bf03abea26123b71ec5a27ee677567d1b11dec1ab0",
+    "csi300/signals.csv": "aca3fee0a68e020025ed4834945b9c5f50b4a76148e05a95e3d8de6c597b7f5d",
+    "sp500/strategies/0001.py": "b024309ca48480e2d480d49149a606aa3343dc7986db116813a581aaffe5bf35",
+    "sp500/strategies/0015.py": "bc94fd398f5700ed0d42c26b576eb37026a106402b541fc53e76081de7f36fb8",
+    "sp500/strategies/0020.py": "22d321cf8ef7c0ef81e11ae676498fa80c2f2d16e928157bd889c4c50429cfe7",
+    "sp500/strategies/0021.py": "6897e177aa6853bc2fd7e6001a7f9376fe95f9141315d1feff816aea4c848167",
+    "sp500/strategies/0022.py": "852ede790c8958c1eca553180ff8d79ef2d7706bc8d5950a6880eb4527a5793e",
+    "sp500/strategies/0023.py": "d861a118e3722eed2e39577624b1cb33444f1aa38603f8d9c536ff3b025983ff",
+    "sp500/strategies/0024.py": "8abdeb07d1cee811cd8d05be1c21bc96348e3f9a814b937363b740003cfb6939",
+    "sp500/strategies/0031.py": "2c38495247194eaf0c2078ba49b5cb85acfc766cefe59e6a92869393869af58b",
+    "sp500/strategies/0032.py": "8aa89df623132af8c466cb1db72c1d119fa565c9f959a2d33873387883a8d8c2",
+    "sp500/strategies/0048.py": "4be3c644038b1a6f40094ec948061c3a8f6f6fecfbd70f51ba56baf7968b1634",
+    "sp500/strategies/0057.py": "7cbd131aa14077b6b8190832bcf0f77d41aea12649545d702deddce9625ec946",
+    "sp500/strategies/0179.py": "777081eb2029cd49f64d686250bec7c4ffc875b5d0fe60853ede4653fa970283",
+    "sp500/strategies/0181.py": "fee090a2d7265cbc0d417810fa15d29dca137e95533c3fe9ad878b5700c98dfc",
+    "sp500/strategies/0215.py": "6ae7aa180ed707e3a20be8862529c42895bcf62cb63cda85b349f098524e73f4",
+    "sp500/signals.csv": "059505010d268ef15121da96fe92edc8bbce6cf9bf19c09f5d7698cfe0b13276",
+    "broad_market/orders.json": "d462e7bb1423c56d235fa6639111b8b1388233d7099f973c78b58d3f0e86524b",
+    "broad_market/archived_equity.csv": "f5b443593c0e2dcf0524c122a8cbd975fe4bc68c6eaad0ea0152fb1951b396d3"
+  }
+}
